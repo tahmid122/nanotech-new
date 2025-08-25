@@ -8,15 +8,13 @@ import Container from "../../components/Container/Container";
 const RootLayout = () => {
   return (
     // Root Layout
-    <div>
+    <div style={{ position: "relative" }}>
       <div className="bothNavbar">
         <Container>
           <TopNavbar />
         </Container>
-        <Container>
-          <MainNavbar />
-        </Container>
       </div>
+      <MainNavbar />
       <Outlet />
     </div>
   );

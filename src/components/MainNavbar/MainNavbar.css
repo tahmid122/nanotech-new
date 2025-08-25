@@ -3,7 +3,17 @@
   align-items: center;
   gap: 20px;
   justify-content: space-between;
-  padding-bottom: 5px;
+  padding: 5px 0;
+  width: 1200px;
+  margin: 0 auto;
+  height: auto;
+}
+.mainNavBarContainer {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  background-color: var(---secondaryColor);
 }
 .searchBar {
   display: flex;
@@ -95,11 +105,15 @@
 }
 /* Responsive part */
 @media only screen and (max-width: 1200px) {
+  #mainNavbar {
+    width: 100%;
+  }
 }
 @media only screen and (max-width: 600px) {
   #mainNavbar {
     flex-direction: column;
     padding: 10px;
+    background-color: #9ff49f;
   }
   .navbarRight {
     justify-content: space-between;
