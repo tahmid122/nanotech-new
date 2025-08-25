@@ -82,10 +82,20 @@
   #trending {
     flex-direction: column;
   }
+  .categories {
+    width: 100%;
+  }
   .subCategories {
     left: 0;
     top: 100%;
   }
+  .trendingProducts {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px;
+  }
 }
 @media only screen and (max-width: 600px) {
+  .trendingProducts {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

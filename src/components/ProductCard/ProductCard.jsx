@@ -3,25 +3,22 @@ import "./ProductCard.css";
 import { Link } from "react-router";
 import { FaCartShopping } from "react-icons/fa6";
 import { BsCart } from "react-icons/bs";
-const ProductCard = () => {
+const ProductCard = ({ product = {} }) => {
   return (
     <div id="productCard">
       <Link>
         <div className="proCardUpper">
-          <img
-            src="https://cdn.waltonplaza.com.bd/98443f37-4b1a-4cb9-ad9b-f36d26b949c9.jpeg"
-            alt="product Image"
-          />
+          <img src={product.image} alt={product.name} />
           <div className="proDescription">
-            <span className="proModel">WNR-6F0-SCRC-CO</span>
-            <span className="proTitle">Walton No-Frost Refrigerator 660L</span>
+            <span className="proModel">{product.model}</span>
+            <span className="proTitle">{product.name}</span>
           </div>
         </div>{" "}
       </Link>
       <div className="proCardBottom">
         <div className="proPrice">
           <p>
-            MRP ৳ <span style={{ fontWeight: "bold" }}>18,000</span>
+            MRP ৳ <span style={{ fontWeight: "bold" }}>{product.price}</span>
           </p>
         </div>
         <div className="proAction">
