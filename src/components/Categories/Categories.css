@@ -37,7 +37,6 @@
   background-color: var(---secondaryColor);
   margin-bottom: 5px;
   border-radius: 4px;
-  height: 100%;
 }
 .subCategories {
   display: flex;
@@ -46,15 +45,14 @@
 .subCategories a {
   padding: 5px 10px;
   transition: all 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 5px;
   font-size: 14px;
   transition: all 0.1s;
   background-color: var(---secondaryColor);
   margin-bottom: 5px;
   border-radius: 4px;
+  height: 41px;
+  display: flex;
+  align-items: center;
 }
 .subCategories a:hover {
   background-color: var(---primaryColor);
