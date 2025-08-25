@@ -5,8 +5,8 @@
 .trendingProducts {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
 }
 /* Responsive part */
 @media only screen and (max-width: 1200px) {
@@ -14,12 +14,12 @@
     flex-direction: column;
   }
   .trendingProducts {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     padding: 10px;
   }
 }
 @media only screen and (max-width: 600px) {
   .trendingProducts {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }

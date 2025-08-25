@@ -11,3 +11,7 @@
 #smallProductCard .proCardBottom {
   height: auto;
 }
+
+#smallProductCard .proDescription span:nth-child(1) {
+  color: black;
+}

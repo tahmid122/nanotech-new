@@ -12,11 +12,29 @@
   justify-content: flex-end;
 }
 #topNavbar ul li a {
-  font-size: 13px;
+  font-size: 14px;
   padding: 10px;
   font-weight: 500;
   transition: all 0.3s;
-  text-decoration: underline;
+  position: relative;
+}
+#topNavbar ul li a::after {
+  content: "";
+  width: 2px;
+  height: 50%;
+  background-color: var(---primaryColor);
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+#topNavbar ul li:last-child::after {
+  width: 0px;
+}
+.languageSwitch a {
+  position: relative;
+}
+.languageSwitch a::after {
+  display: none;
 }
 #topNavbar ul li a:hover {
   background-color: var(---primaryColor);

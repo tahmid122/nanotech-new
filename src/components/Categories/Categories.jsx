@@ -36,7 +36,7 @@ const Categories = () => {
       link: "/",
       image:
         "https://cdn.waltonplaza.com.bd/83210de3-616e-4512-9403-4af64f822429.png",
-      name: isBangla ? "প্লাস্টিক" : "Plastic",
+      name: isBangla ? "প্লাস্টিক পন্য" : "Plastic Items",
       subCategories: ["sub cat 11", "sub cat 12", "sub cat 13"],
     },
     {
@@ -74,7 +74,7 @@ const Categories = () => {
       link: "/",
       image:
         "https://cdn.waltonplaza.com.bd/83210de3-616e-4512-9403-4af64f822429.png",
-      name: isBangla ? "গ্র্যাডজেটস" : "Gadgets",
+      name: isBangla ? "গ্যাজেট" : "Gadgets",
       subCategories: ["sub cat b1", "sub cat h2", "sub cat j3"],
     },
   ];
@@ -86,7 +86,7 @@ const Categories = () => {
       onMouseOut={() => setIsSideOpen(false)}
       className="categories"
     >
-      <h5>Categories</h5>
+      <h5>{isBangla ? "ক্যাটেগরি" : "Categories"}</h5>
       <div className="categoriesList">
         {categories?.map((category) => (
           <Link
