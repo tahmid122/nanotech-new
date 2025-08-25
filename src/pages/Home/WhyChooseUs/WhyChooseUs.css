@@ -41,6 +41,9 @@
 .cross {
   cursor: pointer;
 }
+#whyChooseUs::-webkit-scrollbar {
+  width: 0px;
+}
 /* Responsive part */
 @media only screen and (max-width: 1200px) {
   .modalContent {
@@ -61,8 +64,11 @@
     margin: 0 auto;
   }
   #whyChooseUs {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    place-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    overflow-x: scroll;
+  }
+  .chooseIcon {
+    min-width: 220px;
   }
 }
