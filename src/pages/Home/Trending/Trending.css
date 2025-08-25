@@ -1,0 +1,86 @@
+#trending {
+  display: flex;
+  gap: 20px;
+}
+.categories {
+  min-width: 220px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: var(---primaryShadow);
+  position: relative;
+}
+.subCategories {
+  position: absolute;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: var(---primaryShadow);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 100%;
+  border-left: 1px solid gainsboro;
+}
+.categories h5 {
+  /* margin-bottom: 5px; */
+  padding: 10px;
+}
+.categoriesList {
+  display: flex;
+  flex-direction: column;
+}
+.categoriesList a {
+  padding: 5px;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  font-size: 14px;
+}
+.subCategories {
+  display: flex;
+  flex-direction: column;
+}
+.subCategories a {
+  padding: 5px 10px;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  font-size: 14px;
+}
+.subCategories a:hover {
+  background-color: var(---secondaryColor);
+}
+.categoriesList a:hover {
+  background-color: var(---secondaryColor);
+}
+.categoriesList a img {
+  width: 23px;
+  height: 23px;
+  object-fit: contain;
+}
+.innerCat {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.trendingProducts {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+/* Responsive part */
+@media only screen and (max-width: 1200px) {
+  #trending {
+    flex-direction: column;
+  }
+  .subCategories {
+    left: 0;
+    top: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+}

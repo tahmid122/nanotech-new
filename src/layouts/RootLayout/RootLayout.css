@@ -1,0 +1,7 @@
+.bothNavbar {
+  background-color: var(---secondaryColor);
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
