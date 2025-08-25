@@ -4,6 +4,7 @@ import { Link } from "react-router";
 import { BsCart } from "react-icons/bs";
 const SmallProductCard = ({ product = {} }) => {
   return (
+    // Small Product card
     <div id="smallProductCard">
       <div id="productCard">
         <Link>

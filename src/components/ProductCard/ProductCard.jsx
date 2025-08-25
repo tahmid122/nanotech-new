@@ -5,6 +5,7 @@ import { FaCartShopping } from "react-icons/fa6";
 import { BsCart } from "react-icons/bs";
 const ProductCard = ({ product = {} }) => {
   return (
+    // Single Product card
     <div id="productCard">
       <Link>
         <div className="proCardUpper">

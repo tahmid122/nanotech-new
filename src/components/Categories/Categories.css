@@ -37,6 +37,7 @@
   background-color: var(---secondaryColor);
   margin-bottom: 5px;
   border-radius: 4px;
+  height: 100%;
 }
 .subCategories {
   display: flex;
@@ -77,6 +78,7 @@
   display: flex;
   align-items: center;
   gap: 5px;
+  height: 31px;
 }
 
 /* Responsive part */
