@@ -64,6 +64,26 @@ const products = [
     price: 18000,
     bn_price: "১৮০০০",
   },
+  {
+    id: 7,
+    name: "Walton No-Frost Refrigerator 660L",
+    bn_name: "ওয়ালটন নো-ফ্রস্ট রেফ্রিজারেটর ৬৬০ লিটার",
+    model: "WNR-6F0-SCRC-CO",
+    image:
+      "https://cdn.waltonplaza.com.bd/59c86501-7f4b-4e35-a060-c38185cc5da8.png",
+    price: 18000,
+    bn_price: "১৮০০০",
+  },
+  {
+    id: 8,
+    name: "Walton No-Frost Refrigerator 660L",
+    bn_name: "ওয়ালটন নো-ফ্রস্ট রেফ্রিজারেটর ৬৬০ লিটার",
+    model: "WNR-6F0-SCRC-CO",
+    image:
+      "https://cdn.waltonplaza.com.bd/948fe135-e00f-4390-9f04-bf5043042d8e.jpeg",
+    price: 18000,
+    bn_price: "১৮০০০",
+  },
 ];
 const Trending = () => {
   return (
