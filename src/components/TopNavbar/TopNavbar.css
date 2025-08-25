@@ -42,7 +42,7 @@
   left: 0;
   top: 35px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.159);
-  z-index: 10;
+  z-index: 999;
 }
 .languageSwitch ul li {
   padding: 5px 10px;
