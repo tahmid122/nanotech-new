@@ -1,0 +1,84 @@
+#productCard {
+  height: 425px;
+  border-radius: 5px;
+  background-color: white;
+  transition: all 0.3s;
+}
+#productCard:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.16);
+}
+.proCardUpper {
+  height: 70%;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+}
+.proCardBottom {
+  height: 30%;
+  /* background-color: var(---secondaryColor); */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.proCardUpper img {
+  width: auto;
+  height: 210px;
+  margin: 0 auto;
+}
+.proDescription {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.proDescription span {
+  font-size: 14px;
+  font-weight: 500;
+}
+.proDescription span:nth-child(1) {
+  color: gray;
+}
+.proPrice {
+  padding: 5px 10px;
+}
+.proAction {
+  padding: 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid gainsboro;
+}
+.proAction span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border: 1px solid gainsboro;
+  border-radius: 50%;
+  font-size: 20px;
+  background-color: white;
+}
+.proAction span:hover {
+  box-shadow: var(---primaryShadow);
+  cursor: pointer;
+}
+.proBtn {
+  padding: 0px 20px;
+  border-radius: 5px;
+  background-color: var(---primaryColor);
+  border: none;
+  outline: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 12px;
+  height: 30px;
+  transition: all 0.3s;
+}
+#productCard:hover .proBtn {
+  background-color: var(---accentColor);
+}

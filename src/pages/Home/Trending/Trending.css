@@ -1,5 +1,6 @@
 #trending {
   display: flex;
+  align-items: start;
   gap: 20px;
 }
 .categories {
@@ -36,6 +37,7 @@
   justify-content: space-between;
   gap: 5px;
   font-size: 14px;
+  transition: all 0.1s;
 }
 .subCategories {
   display: flex;
@@ -49,12 +51,15 @@
   justify-content: space-between;
   gap: 5px;
   font-size: 14px;
+  transition: all 0.1s;
 }
 .subCategories a:hover {
   background-color: var(---secondaryColor);
+  font-weight: 500;
 }
 .categoriesList a:hover {
   background-color: var(---secondaryColor);
+  font-weight: 500;
 }
 .categoriesList a img {
   width: 23px;

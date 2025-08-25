@@ -4,6 +4,7 @@ import { Link } from "react-router";
 import useLang from "../../../hooks/useLang";
 import { FaArrowRight } from "react-icons/fa6";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import ProductCard from "../../../components/ProductCard/ProductCard";
 const Trending = () => {
   const { isBangla } = useLang();
   // These categories will come from the database
@@ -114,12 +115,12 @@ const Trending = () => {
         )}
       </div>
       <div className="trendingProducts">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
       </div>
     </section>
   );
