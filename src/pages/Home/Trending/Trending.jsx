@@ -5,6 +5,7 @@ import useLang from "../../../hooks/useLang";
 import { FaArrowRight } from "react-icons/fa6";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import ProductCard from "../../../components/ProductCard/ProductCard";
+import SmallProductCard from "../../../components/SmallProductCard/SmallProductCard";
 // These products details will come from database
 const products = [
   {
@@ -168,7 +169,7 @@ const Trending = () => {
       {/* all trending products */}
       <div className="trendingProducts">
         {products?.map((product) => (
-          <ProductCard key={product.id} product={product} />
+          <SmallProductCard key={product.id} product={product} />
         ))}
       </div>
     </section>

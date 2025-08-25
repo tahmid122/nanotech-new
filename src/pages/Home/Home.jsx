@@ -6,6 +6,7 @@ import Banner from "./Banner/Banner";
 import WhyChooseUs from "./WhyChooseUs/WhyChooseUs";
 import Trending from "./Trending/Trending";
 import PromotionBanner from "./PromotionBanner/PromotionBanner";
+import ProductsSectionOne from "./ProductsSectionOne/ProductsSectionOne";
 const Home = () => {
   // This is home page
   return (
@@ -22,6 +23,10 @@ const Home = () => {
       </Container>
       {/* Promotion Banner */}
       <PromotionBanner />
+      {/* Promotion Banner */}
+      <Container>
+        <ProductsSectionOne />
+      </Container>
     </div>
   );
 };

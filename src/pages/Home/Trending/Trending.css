@@ -1,14 +1,13 @@
 #trending {
   display: flex;
-  align-items: start;
   gap: 20px;
 }
 .categories {
-  min-width: 220px;
+  min-width: 290px;
   background-color: white;
   border-radius: 5px;
-  box-shadow: var(---primaryShadow);
   position: relative;
+  padding: 8px;
 }
 .subCategories {
   position: absolute;
@@ -20,6 +19,7 @@
   top: 0;
   left: 100%;
   border-left: 1px solid gainsboro;
+  padding: 8px;
 }
 .categories h5 {
   /* margin-bottom: 5px; */
@@ -38,6 +38,9 @@
   gap: 5px;
   font-size: 14px;
   transition: all 0.1s;
+  background-color: var(---secondaryColor);
+  margin-bottom: 5px;
+  border-radius: 4px;
 }
 .subCategories {
   display: flex;
@@ -52,13 +55,21 @@
   gap: 5px;
   font-size: 14px;
   transition: all 0.1s;
+  background-color: var(---secondaryColor);
+  margin-bottom: 5px;
+  border-radius: 4px;
 }
 .subCategories a:hover {
-  background-color: var(---secondaryColor);
+  background-color: var(---primaryColor);
+  color: white;
   font-weight: 500;
 }
+.categories:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.16);
+}
 .categoriesList a:hover {
-  background-color: var(---secondaryColor);
+  background-color: var(---primaryColor);
+  color: white;
   font-weight: 500;
 }
 .categoriesList a img {

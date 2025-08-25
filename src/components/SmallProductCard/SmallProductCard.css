@@ -1,0 +1,13 @@
+#smallProductCard #productCard {
+  height: 230px;
+}
+
+#smallProductCard .smallProCardImage {
+  height: 50px;
+}
+#smallProductCard .proCardUpper {
+  height: auto;
+}
+#smallProductCard .proCardBottom {
+  height: auto;
+}

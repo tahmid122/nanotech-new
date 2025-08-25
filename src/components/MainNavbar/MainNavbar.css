@@ -113,7 +113,6 @@
   #mainNavbar {
     flex-direction: column;
     padding: 10px;
-    background-color: #9ff49f;
   }
   .navbarRight {
     justify-content: space-between;
