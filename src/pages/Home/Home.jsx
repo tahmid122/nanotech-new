@@ -11,6 +11,7 @@ import PromotionBannerTwo from "./PromotionBannerTwo/PromotionBannerTwo";
 import ProductsSectionTwo from "./ProductSectionTwo/ProductSectionTwo";
 import PromotionBannerThree from "./PromotionBannerThree/PromotionBannerThree";
 import ProductsSectionThree from "./ProductSectionThree/ProductSectionThree";
+import MiniBlog from "./MiniBlog/MiniBlog";
 const Home = () => {
   // This is home page
   return (
@@ -46,6 +47,10 @@ const Home = () => {
       {/* Product Section Three */}
       <Container>
         <ProductsSectionThree />
+      </Container>
+      {/* Mini blog section */}
+      <Container>
+        <MiniBlog />
       </Container>
     </div>
   );
