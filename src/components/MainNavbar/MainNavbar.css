@@ -83,7 +83,7 @@
   height: 35px;
 }
 .cart:hover {
-  background-color: ghostwhite;
+  background-color: var(---primaryColor);
 }
 .location {
   display: flex;

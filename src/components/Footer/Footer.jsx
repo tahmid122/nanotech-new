@@ -20,7 +20,7 @@ const Footer = () => {
         <div className="tech">
           <h3 style={{ fontSize: "24px" }}>
             {isBangla
-              ? "ন্যানো-টেক উৎপাদন প্রযুক্তি"
+              ? "ন্যানো-টেক প্রডাকশন টেকনোলজি"
               : "Nano-Tech Production Technology"}
           </h3>
           <div className="customerService">
@@ -30,7 +30,7 @@ const Footer = () => {
             <div>
               <p>
                 {isBangla
-                  ? "আমাদের সাথে যোগাযোগ করুন ১৬২৬৭ নম্বরে (চার্জ প্রযোজ্য)"
+                  ? "যোগাযোগ করুনঃ ১৬২৬৭ নম্বরে (চার্জ প্রযোজ্য)"
                   : "Call us at 16267 (Charge Applicable)"}
               </p>
               <p>
@@ -40,14 +40,14 @@ const Footer = () => {
               </p>
               <p>
                 {isBangla
-                  ? "আমরা সকাল ৭:০০ টা থেকে রাত ১১:০০ টা পর্যন্ত উপলব্ধ।"
+                  ? "যোগাযোগের সময়ঃ ৭:০০ টা থেকে রাত ১১:০০ টা পর্যন্ত"
                   : "We are available from 07:00 am to 11:00 pm"}
               </p>
             </div>
           </div>
           <div className="mediaContainer">
             <h6>
-              {isBangla ? "আমাদের সাথে যোগাযোগ রাখুন" : "Stay in touch with us"}
+              {isBangla ? "আমাদের সাথে যুক্ত থাকুন" : "Stay in touch with us"}
             </h6>
             <div className="socialMedias">
               <a href="#" target="_blank">
