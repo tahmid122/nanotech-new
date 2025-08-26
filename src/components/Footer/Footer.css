@@ -21,7 +21,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 3rem;
-  place-items: center;
+  justify-items: center;
 }
 .footer-title {
   font-size: 25px;
