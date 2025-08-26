@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./TopNavbar.css";
 import { Link } from "react-router";
 import useLang from "../../hooks/useLang";
@@ -7,7 +7,20 @@ const TopNavbar = () => {
   // This is top navbar. It will show to everywhere.
   const [isShow, setIsShow] = useState(false);
   const { isBangla, setLang } = useLang();
+  const menuRef = useRef(null);
+  useEffect(() => {
+    function handleClickOutside(event) {
+      // If clicked outside of the menu, close it
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsShow(false);
+      }
+    }
 
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
   return (
     <div id="topNavbar">
       <div className="topNavLogo">
@@ -20,7 +33,11 @@ const TopNavbar = () => {
         <li>
           <Link>{isBangla ? "সেলস পয়েন্টস" : "Sales Points"}</Link>
         </li>
-        <li onClick={() => setIsShow(!isShow)} className="languageSwitch">
+        <li
+          ref={menuRef}
+          onClick={() => setIsShow(!isShow)}
+          className="languageSwitch"
+        >
           <Link>
             {isBangla ? "বাংলা" : "English"}
             <ul style={{ display: isShow ? "block" : "none" }}>

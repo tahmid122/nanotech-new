@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./MainNavbar.css";
 import Logo from "../Logo/Logo";
 import { Link } from "react-router";
@@ -12,6 +12,20 @@ import useLang from "../../hooks/useLang";
 const MainNavbar = () => {
   const [isShow, setIsShow] = useState(false);
   const { isBangla } = useLang();
+  const locationRef = useRef(null);
+  useEffect(() => {
+    function handleClickOutside(event) {
+      // If clicked outside of the menu, close it
+      if (locationRef.current && !locationRef.current.contains(event.target)) {
+        setIsShow(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
   // This is Main navbar. It will show to everywhere.
   return (
     <div className="mainNavBarContainer">
@@ -38,7 +52,11 @@ const MainNavbar = () => {
             <img src="/cart.png" alt="cart" />
           </Link>
 
-          <div onClick={() => setIsShow(!isShow)} className="location">
+          <div
+            ref={locationRef}
+            onClick={() => setIsShow(!isShow)}
+            className="location"
+          >
             <img src="/location.png" alt="location" />
             <span>
               {isBangla ? "অবস্থান নির্বাচন করুন" : "Select Location"}{" "}
