@@ -32,7 +32,7 @@ const HomeCategory = () => {
       link: "/",
       image:
         "https://cdn.waltonplaza.com.bd/83210de3-616e-4512-9403-4af64f822429.png",
-      name: isBangla ? "প্লাস্টিক" : "Plastic",
+      name: isBangla ? "প্লাস্টিক পণ্য" : "Plastic Item",
     },
     {
       id: 5,

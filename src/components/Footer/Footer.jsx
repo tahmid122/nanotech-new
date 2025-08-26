@@ -24,15 +24,31 @@ const Footer = () => {
               : "Nano-Tech Production Technology"}
           </h3>
           <div className="customerService">
-            <h6>Customer service helpline</h6>
+            <h6>
+              {isBangla ? "গ্রাহক সেবা হেল্পলাইন" : "Customer service helpline"}
+            </h6>
             <div>
-              <p>Call us at 16267 (Charge Applicable)</p>
-              <p>or 08 000016267 (Toll Free)</p>
-              <p>We are available from 07:00 am to 11:00 pm</p>
+              <p>
+                {isBangla
+                  ? "আমাদের সাথে যোগাযোগ করুন ১৬২৬৭ নম্বরে (চার্জ প্রযোজ্য)"
+                  : "Call us at 16267 (Charge Applicable)"}
+              </p>
+              <p>
+                {isBangla
+                  ? "অথবা ০৮ ০০০১৬২৬৭ (টোল ফ্রি)"
+                  : "or 08 000016267 (Toll Free)"}
+              </p>
+              <p>
+                {isBangla
+                  ? "আমরা সকাল ৭:০০ টা থেকে রাত ১১:০০ টা পর্যন্ত উপলব্ধ।"
+                  : "We are available from 07:00 am to 11:00 pm"}
+              </p>
             </div>
           </div>
           <div className="mediaContainer">
-            <h6>Stay in touch with us</h6>
+            <h6>
+              {isBangla ? "আমাদের সাথে যোগাযোগ রাখুন" : "Stay in touch with us"}
+            </h6>
             <div className="socialMedias">
               <a href="#" target="_blank">
                 <FaFacebook size={19} />
@@ -47,29 +63,29 @@ const Footer = () => {
         {/* footer part 2 */}
         <div>
           <h3 className="footer-title">
-            {isBangla ? "কোম্পানী" : "About Nano-Tech"}
+            {isBangla ? "ন্যানো-টেক সম্পর্কে" : "About Nano-Tech"}
           </h3>
           <ul className="footer-menu">
             <li>
               <Link>{isBangla ? "হোম" : "Home"}</Link>
             </li>
             <li>
-              <Link>{isBangla ? "হোম" : "About Us"}</Link>
+              <Link>{isBangla ? "সম্পর্কে" : "About Us"}</Link>
+            </li>
+
+            <li>
+              <Link>{isBangla ? "আমরা কেন" : "Why Us"}</Link>
             </li>
             <li>
-              <Link>{isBangla ? "হোম" : "Message from MD"}</Link>
+              <Link>{isBangla ? "যোগাযোগ" : "Contact Us"}</Link>
             </li>
             <li>
-              <Link>{isBangla ? "হোম" : "Why Us"}</Link>
+              <Link>
+                {isBangla ? "পণ্য সার্টিফিকেশন" : " Product Certification"}
+              </Link>
             </li>
             <li>
-              <Link>{isBangla ? "হোম" : "Contact Us"}</Link>
-            </li>
-            <li>
-              <Link>{isBangla ? "হোম" : " Product Certification"}</Link>
-            </li>
-            <li>
-              <Link>{isBangla ? "হোম" : "Plaza List"}</Link>
+              <Link>{isBangla ? "পয়েন্টস তালিকা" : "Points List"}</Link>
             </li>
           </ul>
         </div>
@@ -77,29 +93,35 @@ const Footer = () => {
         {/* footer part 3 */}
         <div>
           <h3 className="footer-title">
-            {isBangla ? "অন্যান্য" : "Help & Information"}
+            {isBangla ? "হেল্প ও ইনফরমেশন" : "Help & Information"}
           </h3>
           <ul className="footer-menu">
             <li>
-              <Link>{isBangla ? "আবেদন" : "Payment Policy"}</Link>
+              <Link>{isBangla ? "পেমেন্ট পলিসি" : "Payment Policy"}</Link>
             </li>
             <li>
-              <Link>{isBangla ? "আবেদন" : "Delivery Policy"}</Link>
+              <Link>{isBangla ? "ডেলিভারি পলিসি" : "Delivery Policy"}</Link>
             </li>
             <li>
-              <Link>{isBangla ? "আবেদন" : "Reward Policy"}</Link>
+              <Link>{isBangla ? "রিওয়ার্ড পলিসি" : "Reward Policy"}</Link>
             </li>
             <li>
-              <Link>{isBangla ? "আবেদন" : "Reject And Return Policy"}</Link>
+              <Link>
+                {isBangla
+                  ? "রিজেক্ট ও রিটার্ন পলিসি"
+                  : "Reject And Return Policy"}
+              </Link>
             </li>
             <li>
-              <Link>{isBangla ? "আবেদন" : "Privacy Policy"}</Link>
+              <Link>{isBangla ? "প্রাইভেসি পলিসি" : "Privacy Policy"}</Link>
             </li>
             <li>
-              <Link>{isBangla ? "আবেদন" : "How to Buy"}</Link>
+              <Link>{isBangla ? "কিভাবে কিনবেন" : "How to Buy"}</Link>
             </li>
             <li>
-              <Link>{isBangla ? "আবেদন" : "FAQ Offer FAQ"}</Link>
+              <Link>
+                {isBangla ? "সর্বাধিক জিজ্ঞাসিত প্রশ্নাবলী" : "FAQ Offer FAQ"}
+              </Link>
             </li>
           </ul>
         </div>
@@ -107,51 +129,53 @@ const Footer = () => {
         {/* footer part 3 */}
         <div>
           <h3 className="footer-title">
-            {isBangla ? "অন্যান্য" : "Top Categories"}
+            {isBangla ? "শীর্ষস্থানীয় ক্যাটাগরিসমূহ" : "Top Categories"}
           </h3>
           <ul className="footer-menu">
             <li>
-              <Link>{isBangla ? "আবেদন" : "Refrigerator & Freezer"}</Link>
+              <Link>
+                {isBangla ? "রেফ্রিজারেটর ও ফ্রিজার" : "Refrigerator & Freezer"}
+              </Link>
             </li>
             <li>
-              <Link>{isBangla ? "আবেদন" : "Air Conditioner"}</Link>
+              <Link>{isBangla ? "এ.সি" : "Air Conditioner"}</Link>
             </li>
             <li>
-              <Link>{isBangla ? "আবেদন" : "Television"}</Link>
+              <Link>{isBangla ? "টেলিভিশন" : "Television"}</Link>
             </li>
             <li>
-              <Link>{isBangla ? "আবেদন" : "Computer"}</Link>
+              <Link>{isBangla ? "কম্পিউটার" : "Computer"}</Link>
             </li>
             <li>
-              <Link>{isBangla ? "আবেদন" : "Home Appliances"}</Link>
+              <Link>{isBangla ? "হোম এপ্লায়েন্স" : "Home Appliances"}</Link>
             </li>
             <li>
-              <Link>{isBangla ? "আবেদন" : "E-Bike"}</Link>
+              <Link>{isBangla ? "ই-বাইক" : "E-Bike"}</Link>
             </li>
             <li>
-              <Link>{isBangla ? "আবেদন" : "Washing Machine"}</Link>
+              <Link>{isBangla ? "ওয়াশিং মেশিন" : "Washing Machine"}</Link>
             </li>
             <li>
-              <Link>{isBangla ? "আবেদন" : "Kitchen Appliance"}</Link>
+              <Link>{isBangla ? "কিচেন এপ্লায়েন্স" : "Kitchen Appliance"}</Link>
             </li>
             <li>
-              <Link>{isBangla ? "আবেদন" : "Featured Products"}</Link>
+              <Link>{isBangla ? "ফিচারড পণ্য" : "Featured Products"}</Link>
             </li>
           </ul>
         </div>
         <div>
           <h3 className="footer-title">
-            {isBangla ? "অন্যান্য" : "Out Brands"}
+            {isBangla ? "আমাদের ব্রান্ড" : "Our Brands"}
           </h3>
           <ul className="footer-menu">
             <li>
-              <Link>{isBangla ? "আবেদন" : "Walton"}</Link>
+              <Link>{isBangla ? "ন্যানো-টেক" : "Nano-Tech"}</Link>
             </li>
             <li>
-              <Link>{isBangla ? "আবেদন" : "Safe"}</Link>
+              <Link>{isBangla ? "সেইফ" : "Safe"}</Link>
             </li>
             <li>
-              <Link>{isBangla ? "আবেদন" : "ACC"}</Link>
+              <Link>{isBangla ? "এ.সি.সি" : "ACC"}</Link>
             </li>
           </ul>
         </div>
@@ -187,24 +211,20 @@ const Footer = () => {
       {/* Down footer */}
       <div className="copyright">
         <div className="paymentMethod">
-          <h6>Payment Method</h6>
+          <h6>{isBangla ? "পেমেন্ট ম্যাথড" : "Payment Method"}</h6>
           <div className="paymentImages">
             <div>
-              {" "}
               <img src="/bkash.png" alt="bkash" />
             </div>
             <div>
-              {" "}
               <img src="/nagad.png" alt="nagad" />
             </div>
 
             <div>
-              {" "}
               <img src="/visa.png" alt="visa" />
             </div>
 
             <div>
-              {" "}
               <img src="/mastercard.png" alt="mastercard" />
             </div>
           </div>{" "}

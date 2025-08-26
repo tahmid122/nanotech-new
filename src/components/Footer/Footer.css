@@ -64,6 +64,7 @@
   display: flex;
   align-items: center;
   gap: 5px;
+  padding-left: 80px;
 }
 .socialMedias a {
   width: 32px;
