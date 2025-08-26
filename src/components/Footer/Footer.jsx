@@ -18,16 +18,19 @@ const Footer = () => {
       <div className="footer-main">
         {/* footer part 1 */}
         <div className="tech">
-          <h3 className="footer-title">
+          <h3 style={{ fontSize: "24px" }}>
             {isBangla
               ? "ন্যানো-টেক উৎপাদন প্রযুক্তি"
               : "Nano-Tech Production Technology"}
           </h3>
-          <p>
-            {isBangla
-              ? "ন্যানো-টেক প্রোডাকশন টেকনোলজি একটি উদ্ভাবনী ইলেকট্রনিক্স উৎপাদনকারী কোম্পানি, যা উচ্চমানের গৃহস্থালী যন্ত্রপাতি এবং স্মার্ট ডিভাইস তৈরিতে নিবেদিতপ্রাণ যা দৈনন্দিন জীবনকে আরও সহজ এবং দক্ষ করে তোলে।"
-              : "Nano-Tech Production Technology is an innovative electronics manufacturing company, dedicated to producing high-quality home appliances and smart devicesthat make everyday life easier and more efficient."}
-          </p>
+          <div className="customerService">
+            <h6>Customer service helpline</h6>
+            <div>
+              <p>Call us at 16267 (Charge Applicable)</p>
+              <p>or 08 000016267 (Toll Free)</p>
+              <p>We are available from 07:00 am to 11:00 pm</p>
+            </div>
+          </div>
           <div className="mediaContainer">
             <h6>Stay in touch with us</h6>
             <div className="socialMedias">
@@ -43,19 +46,30 @@ const Footer = () => {
         {/* footer part 1 */}
         {/* footer part 2 */}
         <div>
-          <h3 className="footer-title">{isBangla ? "কোম্পানী" : "Company"}</h3>
+          <h3 className="footer-title">
+            {isBangla ? "কোম্পানী" : "About Nano-Tech"}
+          </h3>
           <ul className="footer-menu">
             <li>
               <Link>{isBangla ? "হোম" : "Home"}</Link>
             </li>
             <li>
-              <Link>{isBangla ? "পন্যসমূহ" : "Products"}</Link>
+              <Link>{isBangla ? "হোম" : "About Us"}</Link>
             </li>
             <li>
-              <Link>{isBangla ? "যোগাযোগ" : "Contact"}</Link>
+              <Link>{isBangla ? "হোম" : "Message from MD"}</Link>
             </li>
             <li>
-              <Link>{isBangla ? "আমাদের সম্পর্কে" : "About us"}</Link>
+              <Link>{isBangla ? "হোম" : "Why Us"}</Link>
+            </li>
+            <li>
+              <Link>{isBangla ? "হোম" : "Contact Us"}</Link>
+            </li>
+            <li>
+              <Link>{isBangla ? "হোম" : " Product Certification"}</Link>
+            </li>
+            <li>
+              <Link>{isBangla ? "হোম" : "Plaza List"}</Link>
             </li>
           </ul>
         </div>
@@ -63,28 +77,86 @@ const Footer = () => {
         {/* footer part 3 */}
         <div>
           <h3 className="footer-title">
-            {isBangla ? "অন্যান্য" : "Resources"}
+            {isBangla ? "অন্যান্য" : "Help & Information"}
           </h3>
           <ul className="footer-menu">
             <li>
-              <Link to={"/sales-representative"}>
-                {isBangla ? "আবেদন" : "Application"}
-              </Link>
+              <Link>{isBangla ? "আবেদন" : "Payment Policy"}</Link>
             </li>
             <li>
-              <Link>{isBangla ? "শর্তাবলী" : "Terms & Conditions"}</Link>
+              <Link>{isBangla ? "আবেদন" : "Delivery Policy"}</Link>
             </li>
             <li>
-              <Link>{isBangla ? "ওয়ারেন্টি নীতি" : "Warranty Policy"}</Link>
+              <Link>{isBangla ? "আবেদন" : "Reward Policy"}</Link>
             </li>
             <li>
-              <Link>{isBangla ? "পেশা" : "Career"}</Link>
+              <Link>{isBangla ? "আবেদন" : "Reject And Return Policy"}</Link>
+            </li>
+            <li>
+              <Link>{isBangla ? "আবেদন" : "Privacy Policy"}</Link>
+            </li>
+            <li>
+              <Link>{isBangla ? "আবেদন" : "How to Buy"}</Link>
+            </li>
+            <li>
+              <Link>{isBangla ? "আবেদন" : "FAQ Offer FAQ"}</Link>
             </li>
           </ul>
         </div>
         {/* footer part 3 */}
+        {/* footer part 3 */}
+        <div>
+          <h3 className="footer-title">
+            {isBangla ? "অন্যান্য" : "Top Categories"}
+          </h3>
+          <ul className="footer-menu">
+            <li>
+              <Link>{isBangla ? "আবেদন" : "Refrigerator & Freezer"}</Link>
+            </li>
+            <li>
+              <Link>{isBangla ? "আবেদন" : "Air Conditioner"}</Link>
+            </li>
+            <li>
+              <Link>{isBangla ? "আবেদন" : "Television"}</Link>
+            </li>
+            <li>
+              <Link>{isBangla ? "আবেদন" : "Computer"}</Link>
+            </li>
+            <li>
+              <Link>{isBangla ? "আবেদন" : "Home Appliances"}</Link>
+            </li>
+            <li>
+              <Link>{isBangla ? "আবেদন" : "E-Bike"}</Link>
+            </li>
+            <li>
+              <Link>{isBangla ? "আবেদন" : "Washing Machine"}</Link>
+            </li>
+            <li>
+              <Link>{isBangla ? "আবেদন" : "Kitchen Appliance"}</Link>
+            </li>
+            <li>
+              <Link>{isBangla ? "আবেদন" : "Featured Products"}</Link>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="footer-title">
+            {isBangla ? "অন্যান্য" : "Out Brands"}
+          </h3>
+          <ul className="footer-menu">
+            <li>
+              <Link>{isBangla ? "আবেদন" : "Walton"}</Link>
+            </li>
+            <li>
+              <Link>{isBangla ? "আবেদন" : "Safe"}</Link>
+            </li>
+            <li>
+              <Link>{isBangla ? "আবেদন" : "ACC"}</Link>
+            </li>
+          </ul>
+        </div>
         {/* footer part 4 */}
-        <div className="contact">
+        {/* <div className="contact">
           <h3 className="footer-title">{isBangla ? "ঠিকানা" : "Address"}</h3>
           <div className="address">
             <p>
@@ -107,13 +179,36 @@ const Footer = () => {
               <FaPhone /> {isBangla ? "+৮৮০ ১৩২৯৬৩৬৮৯০" : "+880 1329636890"}
             </p>
           </div>
-        </div>
+        </div> */}
         {/* footer part 4 */}
       </div>
       {/* main footer */}
       <hr className="hr-style" />
       {/* Down footer */}
       <div className="copyright">
+        <div className="paymentMethod">
+          <h6>Payment Method</h6>
+          <div className="paymentImages">
+            <div>
+              {" "}
+              <img src="/bkash.png" alt="bkash" />
+            </div>
+            <div>
+              {" "}
+              <img src="/nagad.png" alt="nagad" />
+            </div>
+
+            <div>
+              {" "}
+              <img src="/visa.png" alt="visa" />
+            </div>
+
+            <div>
+              {" "}
+              <img src="/mastercard.png" alt="mastercard" />
+            </div>
+          </div>{" "}
+        </div>
         <small>
           &copy;
           {isBangla

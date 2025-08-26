@@ -6,7 +6,9 @@
 .footer-bg {
   background-color: var(---secondaryColor);
 }
-
+#footer li a {
+  font-size: 14px;
+}
 .hr-style {
   height: 1px;
   background-color: rgb(192, 190, 190);
@@ -19,12 +21,12 @@
 }
 .footer-main {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 3rem;
   justify-items: center;
 }
 .footer-title {
-  font-size: 25px;
+  font-size: 19px;
   color: black;
   margin-bottom: 20px;
 }
@@ -37,7 +39,7 @@
 }
 .footer-menu {
   display: flex;
-  gap: 0.5rem;
+  gap: 0;
   flex-direction: column;
   width: 200px;
 }
@@ -80,7 +82,43 @@
 .mediaContainer h6 {
   margin-bottom: 5px;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 17px;
+}
+.customerService {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 10px;
+}
+.customerService h6 {
+  margin-bottom: 10px;
+  font-size: 17px;
+}
+.customerService p {
+  margin: 0;
+  font-size: 14px;
+}
+.paymentImages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.paymentImages div {
+  width: 80px;
+  height: 35px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 1px;
+  border: 1px solid gainsboro;
+}
+.paymentImages img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.copyright small {
+  color: black;
 }
 /* Responsive part */
 @media only screen and (max-width: 1200px) {
