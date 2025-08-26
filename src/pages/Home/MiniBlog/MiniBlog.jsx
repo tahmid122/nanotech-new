@@ -91,13 +91,23 @@ const MiniBlog = () => {
         </div>
         <div className="infoContent">
           <h5>{isBangla ? "কাস্টমার সাপোর্ট" : "Customer Support"}</h5>
-          <p>
-            আমাদের একটি দক্ষ গ্রাহক সহায়তা দলও রয়েছে। তারা সর্বদা গ্রাহকদের
-            প্রশ্নের উত্তর দিতে এবং ন্যূনতম সময়ের মধ্যে সমাধান করতে প্রস্তুত।
-            তাই, গ্রাহকরা সহজেই একটি সাধারণ ফোন কল বা সোশ্যাল মিডিয়া বার্তার
-            মাধ্যমে আমাদের সাথে যোগাযোগ করতে পারেন এবং আমাদের গ্রাহক সহায়তা দল
-            একই সাথে আপনার প্রশ্নের উত্তর দেবে।
-          </p>
+          {isBangla ? (
+            <p>
+              আমাদের একটি দক্ষ গ্রাহক সহায়তা দলও রয়েছে। তারা সর্বদা গ্রাহকদের
+              প্রশ্নের উত্তর দিতে এবং ন্যূনতম সময়ের মধ্যে সমাধান করতে প্রস্তুত।
+              তাই, গ্রাহকরা সহজেই একটি সাধারণ ফোন কল বা সোশ্যাল মিডিয়া বার্তার
+              মাধ্যমে আমাদের সাথে যোগাযোগ করতে পারেন এবং আমাদের গ্রাহক সহায়তা
+              দল একই সাথে আপনার প্রশ্নের উত্তর দেবে।
+            </p>
+          ) : (
+            <p>
+              We also have an efficient customer support team. They are always
+              ready to serve customers by taking queries and solving them in a
+              minimal time frame. So, customers can easily connect to us by a
+              simple phone call or social media messages & our customer support
+              team will reply to your query at the same time.
+            </p>
+          )}
         </div>
       </div>
     </section>

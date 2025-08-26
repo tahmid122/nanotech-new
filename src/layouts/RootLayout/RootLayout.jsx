@@ -4,11 +4,12 @@ import { Outlet } from "react-router";
 import TopNavbar from "../../components/TopNavbar/TopNavbar";
 import MainNavbar from "../../components/MainNavbar/MainNavbar";
 import Container from "../../components/Container/Container";
+import Footer from "../../components/Footer/Footer";
 
 const RootLayout = () => {
   return (
     // Root Layout
-    <div style={{ position: "relative" }}>
+    <div>
       <div className="bothNavbar">
         <Container>
           <TopNavbar />
@@ -16,6 +17,7 @@ const RootLayout = () => {
       </div>
       <MainNavbar />
       <Outlet />
+      <Footer />
     </div>
   );
 };
