@@ -9,6 +9,7 @@ import PromotionBanner from "./PromotionBanner/PromotionBanner";
 import ProductsSectionOne from "./ProductsSectionOne/ProductsSectionOne";
 import PromotionBannerTwo from "./PromotionBannerTwo/PromotionBannerTwo";
 import ProductsSectionTwo from "./ProductSectionTwo/ProductSectionTwo";
+import PromotionBannerThree from "./PromotionBannerThree/PromotionBannerThree";
 const Home = () => {
   // This is home page
   return (
@@ -36,6 +37,10 @@ const Home = () => {
       {/* Product Section 2 */}
       <Container>
         <ProductsSectionTwo />
+      </Container>
+      {/* Promotion Banner Three */}
+      <Container>
+        <PromotionBannerThree />
       </Container>
     </div>
   );
