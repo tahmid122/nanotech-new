@@ -39,9 +39,9 @@
   font-size: 14px;
   font-weight: 500;
 }
-.proDescription span:nth-child(1) {
+/* .proDescription span:nth-child(1) {
   color: gray;
-}
+} */
 .proPrice {
   padding: 5px 10px;
 }
