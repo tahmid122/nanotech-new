@@ -9,6 +9,12 @@ const SmallProductCard = ({ product = {} }) => {
     // Small Product card
     <div id="smallProductCard">
       <div id="productCard">
+        <div className="discountContainer">
+          <img src="/discountImage.webp" alt="discount" />
+          <span>
+            <b style={{ fontSize: "14px" }}>10%</b> OFF
+          </span>
+        </div>
         <Link>
           <div className="proCardUpper">
             <img
@@ -17,6 +23,7 @@ const SmallProductCard = ({ product = {} }) => {
               alt={product.name}
             />
             <div className="proDescription">
+              <span className="proModel">{product.model}</span>
               <span className="proTitle">
                 {isBangla ? product.bn_name : product.name}
               </span>
@@ -25,13 +32,31 @@ const SmallProductCard = ({ product = {} }) => {
         </Link>
         <div className="proCardBottom">
           <div className="proPrice">
-            <p>
+            <p className="disMrp">
               {isBangla ? "টাকা" : "MRP"} ৳
+              <span>{isBangla ? product.bn_price : product.price}</span>
+            </p>
+            <p>
+              ৳
               <span style={{ fontWeight: "bold" }}>
                 {isBangla ? product.bn_price : product.price}
               </span>
             </p>
           </div>
+          <p className="disCount">
+            Save: ৳7699
+            <span
+              style={{
+                fontWeight: "bold",
+                fontSize: "12px",
+                color: "var(---primaryColor)",
+                marginLeft: "2px",
+              }}
+            >
+              (10% OFF)
+            </span>
+          </p>
+          <p className="proLocation">Available in selected points</p>
           <div className="proAction">
             <span>
               <BsCart />
