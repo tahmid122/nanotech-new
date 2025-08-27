@@ -13,7 +13,7 @@ const images = [
   "https://cdn.waltonplaza.com.bd/b07300df-63c3-4f0d-98e3-6b3a436d112a.jpeg",
   "https://cdn.waltonplaza.com.bd/b07300df-63c3-4f0d-98e3-6b3a436d112a.jpeg",
 ];
-const ProductImagesSlider = () => {
+const ProductImagesSlider = ({ handleImageChange }) => {
   return (
     <div className="pdSlider">
       <Swiper
@@ -24,6 +24,7 @@ const ProductImagesSlider = () => {
           delay: 2500,
           disableOnInteraction: false,
         }}
+        navigation={true}
         breakpoints={{
           // when window width is >= 320px
           320: {
@@ -45,7 +46,7 @@ const ProductImagesSlider = () => {
         className="mySwiper"
       >
         {images?.map((image, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide onClick={() => handleImageChange(image)} key={index}>
             <div className="slide">
               <img src={image} alt="image" />
             </div>

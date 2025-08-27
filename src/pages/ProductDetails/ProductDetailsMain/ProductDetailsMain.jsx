@@ -1,19 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ProductDetailsMain.css";
 import ProductImagesSlider from "./ProductImagesSlider/ProductImagesSlider";
 const ProductDetailsMain = () => {
+  const [mainProImage, setMainProImage] = useState(
+    "https://cdn.waltonplaza.com.bd/364e7d1d-24dc-4d25-afc8-36ba0aa99322.jpeg"
+  );
+  const handleImageChange = (url) => {
+    setMainProImage(url);
+  };
   return (
     <div id="productDetailsMain">
       <div className="pdLeft">
         <div className="pdProductImage">
           <div className="pdProMainImage">
-            <img
-              src="https://cdn.waltonplaza.com.bd/364e7d1d-24dc-4d25-afc8-36ba0aa99322.jpeg"
-              alt="main image"
-            />
+            <img src={mainProImage} alt="main image" />
           </div>
           <div className="pdImagesSlider">
-            <ProductImagesSlider />
+            <ProductImagesSlider handleImageChange={handleImageChange} />
           </div>
         </div>
         <div className="pdProductDetails">details</div>
