@@ -199,7 +199,7 @@
   font-weight: 500;
   cursor: pointer;
 }
-.pdProductDetails .pdQuantityBuy button {
+.buyNowBtn {
   width: 100%;
   padding: 10px;
   border: none;
@@ -212,7 +212,7 @@
   transition: all 0.3s;
   font-weight: bold;
 }
-.pdProductDetails .pdQuantityBuy button:hover {
+.buyNowBtn:hover {
   background-color: var(---secondaryColor);
   color: black;
 }
@@ -302,6 +302,22 @@
   }
   .pdRight {
     width: 100%;
+  }
+  .buyNowBtnContainer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    height: 70px;
+    background-color: var(---secondaryColor);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+  }
+  .buyNowBtn:hover {
+    background-color: #187d18;
+    color: white;
   }
 }
 @media only screen and (max-width: 600px) {

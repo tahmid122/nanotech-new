@@ -107,7 +107,9 @@ const ProductDetailsMain = () => {
                   </span>
                 </div>
               </div>
-              <button>Buy Now</button>
+              <div className="buyNowBtnContainer">
+                <button className="buyNowBtn">Buy Now</button>
+              </div>
             </div>
           </div>
         </div>
