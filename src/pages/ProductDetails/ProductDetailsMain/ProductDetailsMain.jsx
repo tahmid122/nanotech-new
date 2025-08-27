@@ -14,7 +14,7 @@ const ProductDetailsMain = () => {
   };
   return (
     <div id="productDetailsMain">
-      <div>
+      <div style={{ width: "100%" }}>
         <div className="pdLeft">
           {/* product image */}
           <div className="pdProductImage">

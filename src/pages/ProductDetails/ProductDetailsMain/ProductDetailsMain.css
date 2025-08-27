@@ -108,6 +108,7 @@
 }
 .pdImagesSlider {
   height: 40%;
+  width: 100%;
 }
 .pdProductDetails {
   width: 50%;
@@ -276,4 +277,27 @@
   font-weight: bold;
   margin-left: 5px;
   cursor: pointer;
+}
+/* Responsive part */
+@media only screen and (max-width: 1200px) {
+  #productDetailsMain {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .pdLeft {
+    width: 100%;
+    flex-direction: column;
+  }
+  .pdProductImage,
+  .pdProductDetails {
+    width: 100%;
+  }
+  .pdRight {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #productDetailsMain {
+    padding: 0;
+  }
 }
