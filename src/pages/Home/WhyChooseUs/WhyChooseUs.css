@@ -1,8 +1,4 @@
 #whyChooseUs {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
   background-color: var(---secondaryColor);
   border: 1px solid gainsboro;
   padding: 10px;
@@ -11,10 +7,12 @@
 .chooseIcon {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
   cursor: pointer;
 }
-
+.chooseIcon span {
+  font-size: 14px;
+}
 /* modal */
 #modal {
   width: 100%;
@@ -51,22 +49,12 @@
     max-width: 90%;
     margin: 0 auto;
   }
-  #whyChooseUs {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    place-items: center;
-  }
 }
 @media only screen and (max-width: 600px) {
   .modalContent {
     background-color: white;
     max-width: 90%;
     margin: 0 auto;
-  }
-  #whyChooseUs {
-    flex-wrap: nowrap;
-    width: 100%;
-    overflow-x: scroll;
   }
   .chooseIcon {
     min-width: 220px;

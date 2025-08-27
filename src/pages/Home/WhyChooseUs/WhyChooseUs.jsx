@@ -8,6 +8,13 @@ import {
   FaCreditCard,
   FaHandHoldingUsd,
 } from "react-icons/fa";
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Pagination, Navigation, Autoplay } from "swiper/modules";
+
 import useLang from "../../../hooks/useLang";
 const WhyChooseUs = () => {
   const { isBangla } = useLang();
@@ -66,7 +73,51 @@ const WhyChooseUs = () => {
   ];
   return (
     <section id="whyChooseUs">
-      {points.map((point, index) => (
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={30}
+        loop={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        breakpoints={{
+          // when window width is >= 320px
+          320: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          // when window width is >= 480px
+          480: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          // when window width is >= 640px
+          1024: {
+            slidesPerView: 6,
+            spaceBetween: 0,
+          },
+        }}
+        modules={[Autoplay]}
+        className="mySwiper"
+      >
+        {points.map((point, index) => (
+          <SwiperSlide key={index}>
+            <div
+              onClick={() => {
+                setContent(point.description);
+                setIsModalOpen(true);
+              }}
+              key={index}
+              className="chooseIcon"
+            >
+              {point.icon}
+              <span>{point.title}</span>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+      {/* {points.map((point, index) => (
         <div
           onClick={() => {
             setContent(point.description);
@@ -78,7 +129,7 @@ const WhyChooseUs = () => {
           {point.icon}
           <span>{point.title}</span>
         </div>
-      ))}
+      ))} */}
       {/* modal */}
       <div id="modal" style={{ display: isModalOpen ? "flex" : "none" }}>
         <div className="modalContent">
