@@ -56,7 +56,7 @@ const SmallProductCard = ({ product = {} }) => {
               (10% OFF)
             </span>
           </p>
-          <p className="proLocation">Available in selected points</p>
+          <p className="proLocation">Available: 200 Pcs</p>
           <div className="proAction">
             <span>
               <BsCart />
