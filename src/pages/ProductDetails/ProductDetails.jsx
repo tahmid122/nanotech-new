@@ -3,6 +3,7 @@ import "./ProductDetails.css";
 import Container from "../../components/Container/Container";
 import ProductDetailsNav from "./ProductDetailsNav/ProductDetailsNav";
 import ProductDetailsMain from "./ProductDetailsMain/ProductDetailsMain";
+import ProductInDetail from "./ProductInDetail/ProductInDetail";
 const ProductDetails = () => {
   return (
     <Container>
