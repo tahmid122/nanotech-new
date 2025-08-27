@@ -1,0 +1,34 @@
+#mobileNav {
+  background-color: var(---secondaryColor);
+  position: sticky;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  display: none;
+  z-index: 30;
+}
+#mobileNav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+#mobileNav a:hover {
+  background-color: var(---primaryColor);
+  color: white;
+}
+/* Responsive part */
+@media only screen and (max-width: 1200px) {
+  #mobileNav {
+    display: grid;
+  }
+}
+@media only screen and (max-width: 600px) {
+}

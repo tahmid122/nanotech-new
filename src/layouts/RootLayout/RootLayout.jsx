@@ -5,11 +5,12 @@ import TopNavbar from "../../components/TopNavbar/TopNavbar";
 import MainNavbar from "../../components/MainNavbar/MainNavbar";
 import Container from "../../components/Container/Container";
 import Footer from "../../components/Footer/Footer";
+import MobileNavbar from "../../components/MobileNavbar/MobileNavbar";
 
 const RootLayout = () => {
   return (
     // Root Layout
-    <div>
+    <div style={{ position: "relative" }}>
       <div className="bothNavbar">
         <Container>
           <TopNavbar />
@@ -18,6 +19,8 @@ const RootLayout = () => {
       <MainNavbar />
       <Outlet />
       <Footer />
+      {/* Mobile navbar */}
+      <MobileNavbar />
     </div>
   );
 };

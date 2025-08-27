@@ -103,6 +103,7 @@
   align-items: center;
   gap: 1px;
   font-weight: 500;
+  font-size: 15px;
 }
 .locationType {
   position: absolute;
@@ -135,6 +136,9 @@
   #mainNavbar {
     flex-direction: column;
     padding: 10px;
+  }
+  .mainNavBarContainer {
+    position: relative;
   }
   .navbarRight {
     justify-content: space-between;
