@@ -26,71 +26,74 @@ const ProductDetailsMain = () => {
             </div>
           </div>
           {/* product details */}
-
-          <div className="pdProductDetails">
-            <div className="pdProNameModel">
-              <p className="pdProName">Walton Inverter AC 1.5 Ton</p>
-              <p className="pdProModel">
-                WSI-KRYSTALINE (PRETO)-18F [BLUETOOTH]
-              </p>
-            </div>
-            <div className="pdProPriceDiscount">
-              <p className="pdProPrice">
-                <del style={{ color: "red" }}>MSRP ৳76,990</del>{" "}
-                <span className="pdActualPrice">৳69,291</span>
-              </p>
-              <p className="pdDiscount">
-                Save: ৳7,699{" "}
-                <span style={{ color: "var(---primaryColor)" }}>(10% OFF)</span>
-              </p>
-            </div>
-            {/* EMI plan */}
-            <div className="emiPlan">
-              <span className="pdViewPlanButton">
-                <span style={{ color: "var(---primaryColor)" }}>EMI</span>{" "}
-                available
-              </span>
-              <span className="pdViewPlanLink">
-                View Plans <IoIosArrowForward />
-              </span>
-            </div>
-            {/* offers */}
-            <div className="pdProOfferSection">
-              <h6>Available Offers</h6>
-              <ul>
-                <li>
-                  <img className="pdPin" src="/pin.webp" alt="pin" />
-                  <b>Kisti Offer</b> Check Kisti Eligibility{" "}
-                  <span className="pdModalLink">T&C</span>
-                </li>
-                <li>
-                  <img className="pdPin" src="/pin.webp" alt="pin" />
-                  <b>EMI</b> Valid For Cart Value Above ৳10,000
-                  <span className="pdModalLink">T&C</span>
-                </li>
-                <li>
-                  <img className="pdPin" src="/pin.webp" alt="pin" />
-                  <b>EMI Discount</b>
-                  Get 5% OFF,Starting ৳6,095/Month
-                  <span className="pdModalLink">More</span>
-                </li>
-              </ul>
-            </div>
-            {/* brand */}
-            <div className="pdBrand">
-              <span style={{ fontWeight: "bold" }}>Brand</span>
-              <ul>
-                <li>Nano-Tech</li>
-                <li>
-                  See More Products From
-                  <span className="brandCat">
-                    Split AC
-                    <IoIosArrowForward />
+          <div className="pdProductDetails proFlex">
+            <div className="pdDetailsContainer">
+              <div className="pdProNameModel">
+                <p className="pdProName">Walton Inverter AC 1.5 Ton</p>
+                <p className="pdProModel">
+                  WSI-KRYSTALINE (PRETO)-18F [BLUETOOTH]
+                </p>
+              </div>
+              <div className="pdProPriceDiscount">
+                <p className="pdProPrice">
+                  <del style={{ color: "red" }}>MSRP ৳76,990</del>{" "}
+                  <span className="pdActualPrice">৳69,291</span>
+                </p>
+                <p className="pdDiscount">
+                  Save: ৳7,699{" "}
+                  <span style={{ color: "var(---primaryColor)" }}>
+                    (10% OFF)
                   </span>
-                </li>
-              </ul>
+                </p>
+              </div>
+              {/* EMI plan */}
+              <div className="emiPlan">
+                <span className="pdViewPlanButton">
+                  <span style={{ color: "var(---primaryColor)" }}>EMI</span>{" "}
+                  available
+                </span>
+                <span className="pdViewPlanLink">
+                  View Plans <IoIosArrowForward />
+                </span>
+              </div>
+              {/* offers */}
+              <div className="pdProOfferSection">
+                <h6>Available Offers</h6>
+                <ul>
+                  <li>
+                    <img className="pdPin" src="/pin.webp" alt="pin" />
+                    <b>Kisti Offer</b> Check Kisti Eligibility{" "}
+                    <span className="pdModalLink">T&C</span>
+                  </li>
+                  <li>
+                    <img className="pdPin" src="/pin.webp" alt="pin" />
+                    <b>EMI</b> Valid For Cart Value Above ৳10,000
+                    <span className="pdModalLink">T&C</span>
+                  </li>
+                  <li>
+                    <img className="pdPin" src="/pin.webp" alt="pin" />
+                    <b>EMI Discount</b>
+                    Get 5% OFF,Starting ৳6,095/Month
+                    <span className="pdModalLink">More</span>
+                  </li>
+                </ul>
+              </div>
+              {/* brand */}
+              <div className="pdBrand">
+                <span style={{ fontWeight: "bold" }}>Brand</span>
+                <ul>
+                  <li>Nano-Tech</li>
+                  <li>
+                    See More Products From
+                    <span className="brandCat">
+                      Split AC
+                      <IoIosArrowForward />
+                    </span>
+                  </li>
+                </ul>
+              </div>
+              {/* Quantity and Buy */}
             </div>
-            {/* Quantity and Buy */}
             <div className="pdQuantityBuy">
               <div className="pdQuantity">
                 <span className="pdQuantityTitle">Quantity</span>

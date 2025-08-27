@@ -87,7 +87,8 @@
   border-radius: 5px;
   display: flex;
   gap: 15px;
-  min-height: 600px;
+  max-height: 600px;
+  overflow-y: auto;
 }
 .pdProductImage {
   width: 50%;
@@ -277,6 +278,15 @@
   font-weight: bold;
   margin-left: 5px;
   cursor: pointer;
+}
+.proFlex {
+  display: flex;
+  justify-content: space-between;
+}
+.pdDetailsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 /* Responsive part */
 @media only screen and (max-width: 1200px) {
