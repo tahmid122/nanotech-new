@@ -6,7 +6,6 @@ import { BsCart } from "react-icons/bs";
 import useLang from "../../hooks/useLang";
 const ProductCard = ({ product = {} }) => {
   const { isBangla } = useLang();
-  console.log(product.price);
   return (
     // Single Product card
     <div id="productCard">
@@ -16,7 +15,7 @@ const ProductCard = ({ product = {} }) => {
           <b style={{ fontSize: "14px" }}>10%</b> OFF
         </span>
       </div>
-      <Link>
+      <Link to={`/product/${product.id}`}>
         <div className="proCardUpper">
           <img src={product.image} alt={product.name} />
           <div className="proDescription">

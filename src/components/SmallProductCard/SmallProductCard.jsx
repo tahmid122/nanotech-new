@@ -15,7 +15,7 @@ const SmallProductCard = ({ product = {} }) => {
             <b style={{ fontSize: "14px" }}>10%</b> OFF
           </span>
         </div>
-        <Link>
+        <Link to={`/product/${product.id}`}>
           <div className="proCardUpper">
             <img
               className="smallProCardImage"
