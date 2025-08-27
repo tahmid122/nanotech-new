@@ -4,6 +4,7 @@ import ProductImagesSlider from "./ProductImagesSlider/ProductImagesSlider";
 import { IoIosArrowForward } from "react-icons/io";
 import { FaMinus, FaPlus } from "react-icons/fa";
 import ProductInDetail from "../ProductInDetail/ProductInDetail";
+import ProductQuestion from "../ProductQuestion/ProductQuestion";
 const ProductDetailsMain = () => {
   const [mainProImage, setMainProImage] = useState(
     "https://cdn.waltonplaza.com.bd/364e7d1d-24dc-4d25-afc8-36ba0aa99322.jpeg"
@@ -107,7 +108,10 @@ const ProductDetailsMain = () => {
             </div>
           </div>
         </div>
+        {/* product specification*/}
         <ProductInDetail />
+        {/* product related question */}
+        <ProductQuestion />
       </div>
       <div className="pdRight">
         <div className="deliveryOptions">
