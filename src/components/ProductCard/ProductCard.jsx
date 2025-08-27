@@ -6,6 +6,7 @@ import { BsCart } from "react-icons/bs";
 import useLang from "../../hooks/useLang";
 const ProductCard = ({ product = {} }) => {
   const { isBangla } = useLang();
+  console.log(product.price);
   return (
     // Single Product card
     <div id="productCard">
@@ -35,12 +36,14 @@ const ProductCard = ({ product = {} }) => {
           <p>
             ৳
             <span style={{ fontWeight: "bold" }}>
-              {isBangla ? product.bn_price : product.price}
+              {isBangla ? product.bn_discount_price : product.discountPrice}
             </span>
           </p>
         </div>
         <p className="disCount">
-          Save: ৳7699
+          {isBangla
+            ? `ডিস্কাউন্ট: ৳${product.bn_discount_price}`
+            : "Save: ৳1800"}
           <span
             style={{
               fontWeight: "bold",
@@ -49,10 +52,12 @@ const ProductCard = ({ product = {} }) => {
               marginLeft: "2px",
             }}
           >
-            (10% OFF)
+            ({isBangla ? "১০% ছাড়" : "10% OFF"})
           </span>
         </p>
-        <p className="proLocation">Available: 200 Pcs</p>
+        <p className="proLocation">
+          {isBangla ? "উপলব্ধ: ২০০ পিস" : "Available: 200 Pcs"}
+        </p>
         <div className="proAction">
           <span>
             <BsCart />

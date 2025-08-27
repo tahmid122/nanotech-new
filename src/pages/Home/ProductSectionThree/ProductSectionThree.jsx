@@ -10,7 +10,9 @@ const products = [
     image:
       "https://cdn.waltonplaza.com.bd/98443f37-4b1a-4cb9-ad9b-f36d26b949c9.jpeg",
     price: 18000,
+    discountPrice: 16200,
     bn_price: "১৮০০০",
+    bn_discount_price: "১৬২০০",
   },
   {
     id: 2,
@@ -20,7 +22,9 @@ const products = [
     image:
       "https://cdn.waltonplaza.com.bd/efaad78d-5e27-4c2a-9472-48258ae7c03b.jpeg",
     price: 18000,
+    discountPrice: 16200,
     bn_price: "১৮০০০",
+    bn_discount_price: "১৬২০০",
   },
   {
     id: 3,
@@ -30,7 +34,9 @@ const products = [
     image:
       "https://cdn.waltonplaza.com.bd/c4c77c95-5a07-4085-ae37-8ad66740675f.jpeg",
     price: 18000,
+    discountPrice: 16200,
     bn_price: "১৮০০০",
+    bn_discount_price: "১৬২০০",
   },
 
   {
@@ -41,7 +47,9 @@ const products = [
     image:
       "https://cdn.waltonplaza.com.bd/ff71a261-8310-4733-8a81-6fb5abc58ea4.png",
     price: 18000,
+    discountPrice: 16200,
     bn_price: "১৮০০০",
+    bn_discount_price: "১৬২০০",
   },
   {
     id: 6,
@@ -51,7 +59,9 @@ const products = [
     image:
       "https://cdn.waltonplaza.com.bd/5a64a3ed-0b43-406c-a288-ae1883d4b200.jpeg",
     price: 18000,
+    discountPrice: 16200,
     bn_price: "১৮০০০",
+    bn_discount_price: "১৬২০০",
   },
   {
     id: 7,
@@ -61,7 +71,9 @@ const products = [
     image:
       "https://cdn.waltonplaza.com.bd/abe5a83f-48f0-4168-bebf-5412328d41f2.jpeg",
     price: 18000,
+    discountPrice: 16200,
     bn_price: "১৮০০০",
+    bn_discount_price: "১৬২০০",
   },
   {
     id: 8,
@@ -71,7 +83,9 @@ const products = [
     image:
       "https://cdn.waltonplaza.com.bd/e67a5eba-6949-4ea1-b523-4b426761b513.png",
     price: 18000,
+    discountPrice: 16200,
     bn_price: "১৮০০০",
+    bn_discount_price: "১৬২০০",
   },
 
   {
@@ -82,7 +96,9 @@ const products = [
     image:
       "https://cdn.waltonplaza.com.bd/61001ad4-5adf-4820-9d9d-bd5e0c589104.jpeg",
     price: 18000,
+    discountPrice: 16200,
     bn_price: "১৮০০০",
+    bn_discount_price: "১৬২০০",
   },
   {
     id: 10,
@@ -92,7 +108,9 @@ const products = [
     image:
       "https://cdn.waltonplaza.com.bd/3f89abf5-17c8-4537-8fd7-c138051f3016.png",
     price: 18000,
+    discountPrice: 16200,
     bn_price: "১৮০০০",
+    bn_discount_price: "১৬২০০",
   },
   {
     id: 11,
@@ -102,7 +120,9 @@ const products = [
     image:
       "https://cdn.waltonplaza.com.bd/f155ddbb-a08c-42ca-baee-17807826ccc7.jpeg",
     price: 18000,
+    discountPrice: 16200,
     bn_price: "১৮০০০",
+    bn_discount_price: "১৬২০০",
   },
   {
     id: 12,
@@ -112,7 +132,9 @@ const products = [
     image:
       "https://cdn.waltonplaza.com.bd/95e48ba2-04c2-4e60-85d6-eff32863413b.png",
     price: 18000,
+    discountPrice: 16200,
     bn_price: "১৮০০০",
+    bn_discount_price: "১৬২০০",
   },
 
   {
@@ -123,7 +145,9 @@ const products = [
     image:
       "https://cdn.waltonplaza.com.bd/9f7bc87f-3613-4818-9d8c-d482430d2ad0.jpeg",
     price: 18000,
+    discountPrice: 16200,
     bn_price: "১৮০০০",
+    bn_discount_price: "১৬২০০",
   },
   {
     id: 14,
@@ -133,7 +157,9 @@ const products = [
     image:
       "https://cdn.waltonplaza.com.bd/8d17aa27-2438-4548-b651-a33a6516d6af.png",
     price: 18000,
+    discountPrice: 16200,
     bn_price: "১৮০০০",
+    bn_discount_price: "১৬২০০",
   },
   {
     id: 15,
@@ -143,7 +169,9 @@ const products = [
     image:
       "https://cdn.waltonplaza.com.bd/8ddb00d6-b898-4263-868e-2ddd2485ca73.jpeg",
     price: 18000,
+    discountPrice: 16200,
     bn_price: "১৮০০০",
+    bn_discount_price: "১৬২০০",
   },
   {
     id: 16,
@@ -153,7 +181,9 @@ const products = [
     image:
       "https://cdn.waltonplaza.com.bd/681541f7-f986-4d4b-bd8f-78b857341f0f.png",
     price: 18000,
+    discountPrice: 16200,
     bn_price: "১৮০০০",
+    bn_discount_price: "১৬২০০",
   },
 
   {
@@ -164,7 +194,9 @@ const products = [
     image:
       "https://cdn.waltonplaza.com.bd/a19c15a6-60a9-4b0a-956d-04d12761609e.jpeg",
     price: 18000,
+    discountPrice: 16200,
     bn_price: "১৮০০০",
+    bn_discount_price: "১৬২০০",
   },
 ];
 const ProductsSectionThree = () => {
