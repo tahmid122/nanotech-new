@@ -16,6 +16,7 @@
   left: 100%;
   border-left: 1px solid gainsboro;
   padding: 8px;
+  z-index: 1;
 }
 .categories h5 {
   /* margin-bottom: 5px; */
