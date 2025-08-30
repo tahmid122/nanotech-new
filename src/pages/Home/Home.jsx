@@ -49,9 +49,9 @@ const Home = () => {
         <ProductsSectionThree />
       </Container>
       {/* Mini blog section */}
-      <Container>
+      {/* <Container>
         <MiniBlog />
-      </Container>
+      </Container> */}
     </div>
   );
 };
