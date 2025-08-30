@@ -33,9 +33,12 @@
   justify-content: flex-end;
   width: 100%;
   gap: 20px;
+  flex: 1;
 }
 .searchBar {
-  width: 100%;
+  width: 60%;
+  position: relative;
+  margin: 0 auto;
 }
 .searchBar input {
   border: none;
@@ -46,9 +49,11 @@
   background-color: white;
   border-radius: 50px;
   margin-right: 5px;
-  width: 90%;
+  width: 100%;
 }
 .searchBar button {
+  position: absolute;
+  right: 0;
   border: none;
   outline: none;
   font-size: 17px;
@@ -129,6 +134,9 @@
 /* Responsive part */
 @media only screen and (max-width: 1200px) {
   #mainNavbar {
+    width: 100%;
+  }
+  .searchBar {
     width: 100%;
   }
 }
