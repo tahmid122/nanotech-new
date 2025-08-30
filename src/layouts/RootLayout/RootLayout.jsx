@@ -9,7 +9,9 @@ import MobileNavbar from "../../components/MobileNavbar/MobileNavbar";
 
 const RootLayout = () => {
   const location = useLocation();
-  const isLocation = location.pathname.split("/").includes("product");
+  const isLocation =
+    location.pathname.split("/").includes("product") &&
+    window.innerWidth <= 1200;
   return (
     // Root Layout
     <div style={{ position: "relative" }}>
