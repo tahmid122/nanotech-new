@@ -1,6 +1,6 @@
 import React from "react";
 import "./RootLayout.css";
-import { Outlet } from "react-router";
+import { Outlet, useLocation } from "react-router";
 import TopNavbar from "../../components/TopNavbar/TopNavbar";
 import MainNavbar from "../../components/MainNavbar/MainNavbar";
 import Container from "../../components/Container/Container";
@@ -8,6 +8,8 @@ import Footer from "../../components/Footer/Footer";
 import MobileNavbar from "../../components/MobileNavbar/MobileNavbar";
 
 const RootLayout = () => {
+  const location = useLocation();
+  const isLocation = location.pathname.split("/").includes("product");
   return (
     // Root Layout
     <div style={{ position: "relative" }}>
@@ -16,7 +18,7 @@ const RootLayout = () => {
           <TopNavbar />
         </Container>
       </div>
-      <MainNavbar />
+      {isLocation || <MainNavbar />}
       <Outlet />
       <Footer />
       {/* Mobile navbar */}
