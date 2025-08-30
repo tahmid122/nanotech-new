@@ -40,12 +40,18 @@ const ProductDetailsMain = () => {
                   },
                   largeImage: {
                     src: mainProImage,
-                    width: 1000,
-                    height: 1000,
+                    width: 500,
+                    height: 500,
                   },
-                  style: {
-                    zIndex: "10",
-                    backgroundColor: "red",
+                  enlargedImageContainerStyle: {
+                    zIndex: 1500,
+                    backgroundColor: "#fff", // clean white bg
+                  },
+                  enlargedImageStyle: {
+                    objectFit: "contain", // keeps image proportion perfect
+                    width: "100%",
+                    height: "100%",
+                    scale: "1.2",
                   },
                   enlargedImagePosition: mobileView ? "over" : "beside",
                 }}

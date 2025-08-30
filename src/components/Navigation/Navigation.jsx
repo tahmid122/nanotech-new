@@ -6,7 +6,7 @@ const Navigation = ({ title, links }) => {
   return (
     <div id="productDetailsNav">
       {links?.map((link, index) => (
-        <Link key={index} to={link?.label}>
+        <Link key={index} to={link?.href}>
           {link?.label} <IoIosArrowForward />
         </Link>
       ))}
