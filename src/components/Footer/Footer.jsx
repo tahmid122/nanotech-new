@@ -56,6 +56,9 @@ const Footer = () => {
               <a href="#" target="_blank">
                 <FaWhatsapp size={19} />
               </a>
+              <a href="tel:+880 1329636890" target="_blank">
+                <FaPhone size={19} />
+              </a>
             </div>
           </div>
         </div>
