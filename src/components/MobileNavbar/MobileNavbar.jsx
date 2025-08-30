@@ -16,50 +16,50 @@ import Categories from "../Categories/Categories";
 import { FaHome } from "react-icons/fa";
 import { HiOutlineDotsVertical } from "react-icons/hi";
 import AccordionMui from "../AccordionMui/AccordionMui";
-const sections = [
-  {
-    title: "About Nano-Tech",
-    items: [
-      { label: "About Us", href: "#" },
-      { label: "Message from MD", href: "#" },
-      { label: "Why Us", href: "#" },
-      { label: "Contact Us", href: "#" },
-      { label: "Product Certification", href: "#" },
-      { label: "Plaza List", href: "#" },
-    ],
-  },
-  {
-    title: "Help & Information",
-    items: [
-      { label: "FAQ", href: "#" },
-      { label: "Shipping Policy", href: "#" },
-      { label: "Return & Refund", href: "#" },
-    ],
-  },
-  {
-    title: "Top Categories",
-    items: [
-      { label: "Refrigerators", href: "#" },
-      { label: "Television", href: "#" },
-      { label: "Air Conditioner", href: "#" },
-    ],
-  },
-  {
-    title: "Our Brands",
-    items: [
-      { label: "Walton", href: "#" },
-      { label: "Marcel", href: "#" },
-      { label: "Other Brands", href: "#" },
-    ],
-  },
-];
+
 const MobileNavbar = () => {
   const { isBangla } = useLang();
   const [isShow, setIsShow] = useState(false);
   const [isAccountShow, setIsAccountShow] = useState(false);
   const location = useLocation();
   const isLocation = location.pathname.split("/").includes("product");
-  console.log(isAccountShow);
+  const sections = [
+    {
+      title: isBangla ? "ন্যানোটেক সম্পর্কে" : "About Nano-Tech",
+      items: [
+        { label: "About Us", href: "#" },
+        { label: "Message from MD", href: "#" },
+        { label: "Why Us", href: "#" },
+        { label: "Contact Us", href: "#" },
+        { label: "Product Certification", href: "#" },
+        { label: "Plaza List", href: "#" },
+      ],
+    },
+    {
+      title: isBangla ? "হেল্প ও ইনফরমেশন" : "Help & Information",
+      items: [
+        { label: "FAQ", href: "#" },
+        { label: "Shipping Policy", href: "#" },
+        { label: "Return & Refund", href: "#" },
+      ],
+    },
+    {
+      title: isBangla ? "শীর্ষস্থানীয় ক্যাটাগরীসমূহ" : "Top Categories",
+      items: [
+        { label: "Refrigerators", href: "#" },
+        { label: "Television", href: "#" },
+        { label: "Air Conditioner", href: "#" },
+      ],
+    },
+    {
+      title: isBangla ? "আমাদের ব্রান্ড" : "Our Brands",
+      items: [
+        { label: "Walton", href: "#" },
+        { label: "Marcel", href: "#" },
+        { label: "Other Brands", href: "#" },
+      ],
+    },
+  ];
   return (
     <div id="mobileNav" style={{ zIndex: isAccountShow ? "500" : "50" }}>
       {/* Product Page Top Navigation */}
@@ -102,56 +102,58 @@ const MobileNavbar = () => {
           </Link>
         </div>
         <div className="accountInfoDetails">
-          <Link className="logRegBtn">Login/Register</Link>
+          <Link className="logRegBtn">
+            {isBangla ? "লগইন/রেজিস্টার" : "Login/Register"}
+          </Link>
           <div className="accountInfoNavigation">
             <Link>
               <img
                 src="https://waltonplaza.com.bd/_next/image?url=%2Fuser-profile-64.png&w=48&q=75"
                 alt=""
               />{" "}
-              My Profile
+              {isBangla ? "আমার প্রোফাইল" : "My Profile"}
             </Link>
             <Link>
               <img
                 src="https://waltonplaza.com.bd/_next/image?url=%2Fcontact-details-64.png&w=48&q=75"
                 alt=""
               />
-              Manage Profile
+              {isBangla ? "ম্যানেজ প্রোফাইল" : "Manage Profile"}
             </Link>
             <Link>
               <img
                 src="https://waltonplaza.com.bd/_next/image?url=%2Fmost-recent-50.png&w=48&q=75"
                 alt=""
               />{" "}
-              My Order
+              {isBangla ? "আমার অর্ডার" : "My Order"}
             </Link>
             <Link>
               <img
                 src="https://waltonplaza.com.bd/_next/image?url=%2Faddress-book-50.png&w=48&q=75"
                 alt=""
               />{" "}
-              Address Book
+              {isBangla ? "এড্রেস বুক" : "Address Book"}
             </Link>
             <Link>
               <img
                 src="https://waltonplaza.com.bd/_next/image?url=%2Ficon-wish.png&w=48&q=75"
                 alt=""
               />{" "}
-              Reward Point History
+              {isBangla ? "রিওয়ার্ড ও পয়েন্ট হিস্টোরি" : "Reward Point History"}
             </Link>
             <Link>
               <img
                 src="https://waltonplaza.com.bd/_next/image?url=%2Ficon-wish.png&w=48&q=75"
                 alt=""
               />{" "}
-              My Wishlist & Followed Plaza
+              {isBangla ? "আমার উইশলিস্ট" : "My Wishlist"}
             </Link>
             <Link>
               <img
                 src="https://waltonplaza.com.bd/_next/image?url=%2Fuser-profile-64.png&w=48&q=75"
                 alt=""
               />{" "}
-              Kisti Surokkha
+              {isBangla ? "কিস্তি সুরক্ষা" : "Kisti Surokkha"}
             </Link>
             <AccordionMui sections={sections} />
           </div>
