@@ -83,11 +83,7 @@
 /* Responsive part */
 @media only screen and (max-width: 1200px) {
   .categories {
-    width: 100%;
-  }
-  .subCategories {
-    left: 0;
-    top: 100%;
+    display: none;
   }
 }
 @media only screen and (max-width: 600px) {

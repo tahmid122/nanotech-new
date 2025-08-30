@@ -97,7 +97,9 @@ const Categories = () => {
               <img src={category.image} alt={category.name} />
               {category.name}
             </div>
-            {category.subCategories.length > 0 && <MdKeyboardArrowRight />}
+            {category.subCategories.length > 0 && (
+              <MdKeyboardArrowRight className="rightArrowIcon" />
+            )}
           </Link>
         ))}
       </div>
