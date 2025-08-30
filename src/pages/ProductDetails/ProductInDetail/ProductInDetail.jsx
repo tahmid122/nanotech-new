@@ -72,12 +72,14 @@ const ProductInDetail = () => {
           <div key={index} className="pinDetail">
             <h6>{detail?.heading}</h6>
             <table>
-              {detail?.items?.map((sDetail, index) => (
-                <tr key={index}>
-                  <td>{sDetail.label}</td>
-                  <td>{sDetail.value}</td>
-                </tr>
-              ))}
+              <tbody>
+                {detail?.items?.map((sDetail, index) => (
+                  <tr key={index}>
+                    <td>{sDetail.label}</td>
+                    <td>{sDetail.value}</td>
+                  </tr>
+                ))}
+              </tbody>
             </table>
           </div>
         ))}

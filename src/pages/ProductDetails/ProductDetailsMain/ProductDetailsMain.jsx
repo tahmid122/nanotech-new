@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import ReactImageMagnify from "react-image-magnify";
+
 import "./ProductDetailsMain.css";
 import ProductImagesSlider from "./ProductImagesSlider/ProductImagesSlider";
 import { IoIosArrowForward } from "react-icons/io";
@@ -6,12 +8,21 @@ import { FaMinus, FaPlus } from "react-icons/fa";
 import ProductInDetail from "../ProductInDetail/ProductInDetail";
 import ProductQuestion from "../ProductQuestion/ProductQuestion";
 const ProductDetailsMain = () => {
+  const [mobileView, setMobileView] = useState(false);
   const [mainProImage, setMainProImage] = useState(
     "https://cdn.waltonplaza.com.bd/364e7d1d-24dc-4d25-afc8-36ba0aa99322.jpeg"
   );
   const handleImageChange = (url) => {
     setMainProImage(url);
   };
+  useEffect(() => {
+    if (window.innerWidth <= 600) {
+      setMobileView(true);
+    } else {
+      setMobileView(false);
+    }
+  }, []);
+
   return (
     <div id="productDetailsMain">
       <div style={{ width: "100%" }}>
@@ -19,7 +30,26 @@ const ProductDetailsMain = () => {
           {/* product image */}
           <div className="pdProductImage">
             <div className="pdProMainImage">
-              <img src={mainProImage} alt="main image" />
+              {/* <img src={mainProImage} alt="main image" /> */}
+              <ReactImageMagnify
+                {...{
+                  smallImage: {
+                    alt: "Walton Inverter AC 1.5 Ton",
+                    isFluidWidth: true,
+                    src: mainProImage,
+                  },
+                  largeImage: {
+                    src: mainProImage,
+                    width: 1000,
+                    height: 1000,
+                  },
+                  style: {
+                    zIndex: "50",
+                    backgroundColor: "red",
+                  },
+                  enlargedImagePosition: mobileView ? "over" : "beside",
+                }}
+              />
             </div>
             <div className="pdImagesSlider">
               <ProductImagesSlider handleImageChange={handleImageChange} />
