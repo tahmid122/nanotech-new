@@ -101,7 +101,7 @@ const MobileNavbar = () => {
             <FaHome size={25} />
           </Link>
         </div>
-        <div className="accountInfoDetails" style={{ height: "1000px" }}>
+        <div className="accountInfoDetails">
           <Link className="logRegBtn">Login/Register</Link>
           <div className="accountInfoNavigation">
             <Link>

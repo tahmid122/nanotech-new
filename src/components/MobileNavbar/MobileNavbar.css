@@ -133,6 +133,7 @@
 #mobileNav .accountInfo .accountInfoDetails {
   margin-top: 20px;
   background-color: white;
+  padding-bottom: 50px;
 }
 #mobileNav .accountInfo .accountInfoDetails .logRegBtn {
   font-size: 20px;
