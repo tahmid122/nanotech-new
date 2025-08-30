@@ -27,36 +27,45 @@ const MobileNavbar = () => {
     {
       title: isBangla ? "ন্যানোটেক সম্পর্কে" : "About Nano-Tech",
       items: [
-        { label: "About Us", href: "#" },
-        { label: "Message from MD", href: "#" },
-        { label: "Why Us", href: "#" },
-        { label: "Contact Us", href: "#" },
-        { label: "Product Certification", href: "#" },
-        { label: "Plaza List", href: "#" },
+        { label: isBangla ? "আমাদের সম্পর্কে" : "About Us", href: "#" },
+        {
+          label: isBangla ? "এমডির থেকে ম্যাসেজ" : "Message from MD",
+          href: "#",
+        },
+        { label: isBangla ? "কেন আমরা" : "Why Us", href: "#" },
+        { label: isBangla ? "যোগাযোগ" : "Contact Us", href: "#" },
+        {
+          label: isBangla ? "পণ্য সার্টিফিকেশন" : "Product Certification",
+          href: "#",
+        },
+        { label: isBangla ? "পয়েন্ট লিস্ট" : "Point List", href: "#" },
       ],
     },
     {
       title: isBangla ? "হেল্প ও ইনফরমেশন" : "Help & Information",
       items: [
-        { label: "FAQ", href: "#" },
-        { label: "Shipping Policy", href: "#" },
-        { label: "Return & Refund", href: "#" },
+        { label: isBangla ? "এফএকিউ" : "FAQ", href: "#" },
+        { label: isBangla ? "শিপিং নীতিমালা" : "Shipping Policy", href: "#" },
+        {
+          label: isBangla ? "রিটার্ণ ও রিফান্ড" : "Return & Refund",
+          href: "#",
+        },
       ],
     },
     {
       title: isBangla ? "শীর্ষস্থানীয় ক্যাটাগরীসমূহ" : "Top Categories",
       items: [
-        { label: "Refrigerators", href: "#" },
-        { label: "Television", href: "#" },
-        { label: "Air Conditioner", href: "#" },
+        { label: isBangla ? "রেফ্রিজারেটর" : "Refrigerators", href: "#" },
+        { label: isBangla ? "টেলিভিশন" : "Television", href: "#" },
+        { label: isBangla ? "এসি" : "Air Conditioner", href: "#" },
       ],
     },
     {
       title: isBangla ? "আমাদের ব্রান্ড" : "Our Brands",
       items: [
-        { label: "Walton", href: "#" },
-        { label: "Marcel", href: "#" },
-        { label: "Other Brands", href: "#" },
+        { label: isBangla ? "ন্যানো-টেক" : "Nano-Tech", href: "#" },
+        { label: isBangla ? "মার্সেল" : "Marcel", href: "#" },
+        { label: isBangla ? "অন্যান্য ব্রান্ড" : "Other Brands", href: "#" },
       ],
     },
   ];
