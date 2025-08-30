@@ -44,7 +44,7 @@ const ProductDetailsMain = () => {
                     height: 1000,
                   },
                   style: {
-                    zIndex: "50",
+                    zIndex: "10",
                     backgroundColor: "red",
                   },
                   enlargedImagePosition: mobileView ? "over" : "beside",
