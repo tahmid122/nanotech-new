@@ -6,7 +6,12 @@
   padding: 20px 0;
 }
 .shopLeft {
-  width: 25%;
+  width: 30%;
+}
+.shopLeft .filterCheckboxContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 .shopRight {
   width: 100%;

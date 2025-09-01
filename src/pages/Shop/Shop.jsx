@@ -3,7 +3,8 @@ import "./Shop.css";
 import Container from "../../components/Container/Container";
 import Navigation from "../../components/Navigation/Navigation";
 import ProductCard from "../../components/ProductCard/ProductCard";
-import FilterCheckbox from "../../components/FilterCheckbox/FilterCheckbox";
+import FilterCheckbox from "./FilterCheckbox/FilterCheckbox";
+import PriceRange from "./PriceRange/PriceRange";
 // these data will come from database
 const products = [
   {
@@ -209,7 +210,48 @@ const Shop = () => {
       <div id="shop">
         {/* Filter */}
         <div className="shopLeft">
-          <FilterCheckbox />
+          <div className="filterCheckboxContainer">
+            <FilterCheckbox
+              title="BRAND"
+              inputs={[
+                { label: "Nano-Tech", value: "nano-tech" },
+                { label: "ACC", value: "acc" },
+              ]}
+            />
+            {/* Price range slider */}
+            <PriceRange />
+            <FilterCheckbox
+              title="COOLING CAPACITY (TON)"
+              inputs={[
+                { label: "0.75 Ton", value: "0.75" },
+                { label: "1 Ton", value: "1" },
+                { label: "1.25 Ton", value: "1.25" },
+                { label: "2 Ton", value: "2" },
+              ]}
+            />
+            <FilterCheckbox
+              title="SERIES NAME"
+              inputs={[
+                { label: "Inverna", value: "inverna" },
+                { label: "Oceanus", value: "oceanus" },
+                { label: "Diamond", value: "Diamond" },
+                { label: "Avian", value: "avian" },
+                { label: "Venturi", value: "Venturi" },
+              ]}
+            />
+            <FilterCheckbox
+              title="TECHNOLOGY"
+              inputs={[
+                { label: "ProGen Inverter", value: "ProGen Inverter" },
+                {
+                  label: "Intelligent Inverter",
+                  value: "Intelligent Inverter",
+                },
+                { label: "Non-Inverter", value: "Non-Inverter" },
+                { label: "Twinfold Inverter", value: "Twinfold Inverter" },
+              ]}
+            />
+          </div>
         </div>
         {/* Products */}
         <div className="shopRight">

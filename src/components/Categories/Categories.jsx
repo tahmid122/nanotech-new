@@ -90,10 +90,6 @@ const Categories = ({ setIsShow }) => {
       <div className="categoriesList">
         {categories?.map((category) => (
           <Link
-            to={`/shop`}
-            onClick={() => {
-              setIsShow(false);
-            }}
             onMouseOver={() => setSelectedSubCategories(category.subCategories)}
             key={category.id}
           >
