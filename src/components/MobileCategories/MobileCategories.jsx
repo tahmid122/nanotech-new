@@ -3,7 +3,7 @@ import "./MobileCategories.css";
 import useLang from "../../hooks/useLang";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-router";
-const MobileCategories = () => {
+const MobileCategories = ({ setIsShow }) => {
   const { isBangla } = useLang();
   // These categories will come from the database
   const categories = [
@@ -95,7 +95,7 @@ const MobileCategories = () => {
             </div>
             <div className="child">
               {selectedSubCategories?.map((cat, index) => (
-                <Link to={"/shop"} key={index}>
+                <Link onClick={() => setIsShow(false)} to={"/shop"} key={index}>
                   {cat}
                 </Link>
               ))}
