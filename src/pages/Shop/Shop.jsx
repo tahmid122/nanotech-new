@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Shop.css";
 import Container from "../../components/Container/Container";
 import Navigation from "../../components/Navigation/Navigation";
 import ProductCard from "../../components/ProductCard/ProductCard";
 import FilterCheckbox from "./FilterCheckbox/FilterCheckbox";
 import PriceRange from "./PriceRange/PriceRange";
+import { FaFilter, FaSliders, FaXmark } from "react-icons/fa6";
+import { FaSortAmountUp } from "react-icons/fa";
 // these data will come from database
 const products = [
   {
@@ -205,12 +207,30 @@ const products = [
   },
 ];
 const Shop = () => {
+  const [isShowFilter, setIsShowFilter] = useState(false);
   return (
     <Container>
       <div id="shop">
         {/* Filter */}
         <div className="shopLeft">
-          <div className="filterCheckboxContainer">
+          <div
+            className="filterCheckboxContainer"
+            style={{ display: isShowFilter ? "flex" : "" }}
+          >
+            {/* mobile done button */}
+            <button
+              onClick={() => setIsShowFilter(false)}
+              className="mobileFilterDoneButton"
+            >
+              Done
+            </button>
+            {/* Mobile filter close btn */}
+            <span
+              onClick={() => setIsShowFilter(false)}
+              className="mobileFilterCloseButton"
+            >
+              <FaXmark size={30} />
+            </span>
             <FilterCheckbox
               title="BRAND"
               inputs={[
@@ -269,13 +289,21 @@ const Shop = () => {
               <img src="/icon-wish.webp" alt="result icon" /> <b>128</b> items
               found in Split AC
             </div>
-            <div className="filterInputSort">
-              <img src="/sort.webp" alt="sort icon" /> <b>Sort By</b>
-              <select className="filterSelect" name="filter" id="">
-                <option value="best_match">Best Match</option>
-                <option value="price_hl">Price High to Low</option>
-                <option value="price_lh">Price Low to High</option>
-              </select>
+            <div className="sortContainer">
+              <div className="filterInputSort">
+                <FaSortAmountUp /> <b>Sort By</b>
+                <select className="filterSelect" name="filter" id="">
+                  <option value="best_match">Best Match</option>
+                  <option value="price_hl">Price High to Low</option>
+                  <option value="price_lh">Price Low to High</option>
+                </select>
+              </div>
+              <div
+                onClick={() => setIsShowFilter(true)}
+                className="filterInputSort filterBtnMobile"
+              >
+                <FaSliders /> <b>Filter</b>
+              </div>
             </div>
           </div>
           {/* Main Product Section */}

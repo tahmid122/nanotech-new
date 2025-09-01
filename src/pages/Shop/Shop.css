@@ -12,6 +12,7 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
+  position: relative;
 }
 .shopRight {
   width: 100%;
@@ -44,4 +45,99 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+}
+#shop .shopLeft .filterCheckboxContainer .mobileFilterDoneButton {
+  background-color: var(---primaryColor);
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  margin: 0 auto;
+  cursor: pointer;
+  display: none;
+}
+#shop .shopLeft .filterCheckboxContainer .mobileFilterCloseButton {
+  width: 35px;
+  height: 35px;
+  position: fixed;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.3s;
+  display: none;
+}
+#shop .shopLeft .filterCheckboxContainer .mobileFilterCloseButton:hover {
+  background-color: var(---secondaryColor);
+}
+.filterBtnMobile {
+  display: none;
+}
+/* Responsive part */
+@media only screen and (max-width: 1200px) {
+  #shop {
+    flex-direction: column;
+    padding: 0;
+    gap: 0;
+  }
+  .shopLeft {
+    width: 100%;
+  }
+  #shop .shopProductsContainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  #shop .shopLeft .filterCheckboxContainer {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 70;
+    background-color: white;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    padding-bottom: 50px;
+    display: none;
+  }
+  #shop .shopLeft .filterCheckboxContainer .mobileFilterDoneButton {
+    display: block;
+  }
+  #shop .shopLeft .filterCheckboxContainer .mobileFilterCloseButton {
+    display: flex;
+  }
+  #shop .shopRight .resultAndSort {
+    flex-direction: column-reverse;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  #shop .shopRight .sortContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: var(---primaryColor);
+    color: white;
+  }
+  .filterBtnMobile {
+    display: flex;
+    cursor: pointer;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #shop .shopProductsContainer {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
 }
