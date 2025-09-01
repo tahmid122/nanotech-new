@@ -10,16 +10,18 @@ import MobileNavbar from "../../components/MobileNavbar/MobileNavbar";
 const RootLayout = () => {
   const location = useLocation();
   const isLocation =
-    location.pathname.split("/").includes("product") ||
-    (location.pathname.split("/").includes("shop") &&
-      window.innerWidth <= 1200);
+    location.pathname.split("/").includes("product") &&
+    window.innerWidth <= 1200;
+  const isLocation2 =
+    location.pathname.split("/").includes("shop") && window.innerWidth <= 1200;
+  console.log(isLocation, isLocation2);
   return (
     // Root Layout
     <div style={{ position: "relative" }}>
       <div className="bothNavbar">
-        <Container>{isLocation || <TopNavbar />}</Container>
+        <Container>{isLocation || isLocation2 ? "" : <TopNavbar />}</Container>
       </div>
-      {isLocation || <MainNavbar />}
+      {isLocation || isLocation2 ? "" : <MainNavbar />}
       <Outlet />
       <Footer />
       {/* Mobile navbar */}
