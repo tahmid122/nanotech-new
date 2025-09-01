@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "./Categories.css";
 import useLang from "../../hooks/useLang";
-import { Link } from "react-router";
 import { MdKeyboardArrowRight } from "react-icons/md";
-const Categories = ({ setIsShow }) => {
+import { Link } from "react-router";
+const Categories = () => {
   const { isBangla } = useLang();
   // These categories will come from the database
   const categories = [
@@ -90,6 +90,7 @@ const Categories = ({ setIsShow }) => {
       <div className="categoriesList">
         {categories?.map((category) => (
           <Link
+            to={"/shop"}
             onMouseOver={() => setSelectedSubCategories(category.subCategories)}
             key={category.id}
           >
@@ -106,13 +107,7 @@ const Categories = ({ setIsShow }) => {
       {isSideOpen && selectedSubCategories.length > 0 && (
         <div className="subCategories">
           {selectedSubCategories?.map((cat, index) => (
-            <Link
-              to={"/shop"}
-              onClick={() => {
-                setIsShow(false);
-              }}
-              key={index}
-            >
+            <Link to={"/shop"} key={index}>
               {cat}
             </Link>
           ))}

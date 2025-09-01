@@ -38,7 +38,7 @@ const TopNavbar = () => {
           onClick={() => setIsShow(!isShow)}
           className="languageSwitch"
         >
-          <Link>
+          <Link to={"#"}>
             {isBangla ? "বাংলা" : "English"}
             <ul style={{ display: isShow ? "block" : "none" }}>
               <li onClick={() => setLang("bangla")}>বাংলা</li>
