@@ -5,8 +5,16 @@ import Navigation from "../../components/Navigation/Navigation";
 import ProductCard from "../../components/ProductCard/ProductCard";
 import FilterCheckbox from "./FilterCheckbox/FilterCheckbox";
 import PriceRange from "./PriceRange/PriceRange";
-import { FaFilter, FaSliders, FaXmark } from "react-icons/fa6";
+import {
+  FaArrowLeft,
+  FaFilter,
+  FaMagnifyingGlass,
+  FaSliders,
+  FaXmark,
+} from "react-icons/fa6";
 import { FaSortAmountUp } from "react-icons/fa";
+import { BsCart } from "react-icons/bs";
+import { Link } from "react-router";
 // these data will come from database
 const products = [
   {
@@ -208,9 +216,39 @@ const products = [
 ];
 const Shop = () => {
   const [isShowFilter, setIsShowFilter] = useState(false);
+  const [isSearchShow, setIsSearchShow] = useState(false);
   return (
     <Container>
       <div id="shop">
+        {/* Top bar of shop page */}
+        <div className="shopTopBar">
+          <div className="stbLeft">
+            <span>
+              <Link to={-1}>
+                <FaArrowLeft size={20} />
+              </Link>
+            </span>
+            <div className="stbSearchBox">
+              {isSearchShow ? (
+                <input type="text" placeholder="Search Your Product Here" />
+              ) : (
+                "Category Name"
+              )}
+            </div>
+          </div>
+          <div className="stbRight">
+            <span onClick={() => setIsSearchShow(!isSearchShow)}>
+              {isSearchShow ? (
+                <FaXmark size={20} />
+              ) : (
+                <FaMagnifyingGlass size={20} />
+              )}
+            </span>
+            <span>
+              <BsCart size={20} />
+            </span>
+          </div>
+        </div>
         {/* Filter */}
         <div className="shopLeft">
           <div

@@ -83,6 +83,66 @@
 .filterBtnMobile {
   display: none;
 }
+#shop .shopTopBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: var(---primaryColor);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: none;
+}
+#shop .shopTopBar .stbLeft {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 500;
+  width: 100%;
+  font-size: 15px;
+}
+#shop .shopTopBar .stbLeft .stbSearchBox {
+  width: 100%;
+}
+#shop .shopTopBar .stbLeft .stbSearchBox input {
+  height: 100%;
+  width: 90%;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  font-size: 15px;
+  padding: 10px;
+}
+#shop .shopTopBar .stbRight {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+#shop .shopTopBar span {
+  min-width: 35px;
+  min-height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: var(---secondaryColor);
+}
+#shop .shopTopBar .stbRight span:first-child {
+  background-color: var(---primaryColor);
+}
+#shop .shopTopBar .stbRight span:last-child {
+  background-color: var(---secondaryColor);
+  color: black;
+  transition: all 0.3s;
+}
+#shop .shopTopBar .stbRight span:last-child:hover {
+  background-color: var(---primaryColor);
+  color: white;
+  border: 1px solid var(---secondaryColor);
+}
 /* Responsive part */
 @media only screen and (max-width: 1200px) {
   #shop {
@@ -124,15 +184,28 @@
   #shop .shopRight .sortContainer {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
     padding: 10px 20px;
     background-color: var(---primaryColor);
     color: white;
+    gap: 10px;
+  }
+  #shop .shopRight .sortContainer div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #shop .shopRight .sortContainer div:last-child {
+    border-left: 2px solid white;
   }
   .filterBtnMobile {
     display: flex;
     cursor: pointer;
+  }
+  #shop .shopTopBar {
+    display: flex;
   }
 }
 @media only screen and (max-width: 600px) {
