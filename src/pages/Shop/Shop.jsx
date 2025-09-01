@@ -15,6 +15,7 @@ import {
 import { FaSortAmountUp } from "react-icons/fa";
 import { BsCart } from "react-icons/bs";
 import { Link } from "react-router";
+import useLang from "../../hooks/useLang";
 // these data will come from database
 const products = [
   {
@@ -215,6 +216,7 @@ const products = [
   },
 ];
 const Shop = () => {
+  const { isBangla } = useLang();
   const [isShowFilter, setIsShowFilter] = useState(false);
   const [isSearchShow, setIsSearchShow] = useState(false);
   return (
@@ -230,9 +232,14 @@ const Shop = () => {
             </span>
             <div className="stbSearchBox">
               {isSearchShow ? (
-                <input type="text" placeholder="Search Your Product Here" />
+                <input
+                  type="text"
+                  placeholder={
+                    isBangla ? "আপনার পণ্য খুঁজুন" : "Search Your Product Here"
+                  }
+                />
               ) : (
-                "Category Name"
+                <>{isBangla ? "ক্যাটাগরি নাম" : "Category Name"}</>
               )}
             </div>
           </div>
@@ -260,7 +267,7 @@ const Shop = () => {
               onClick={() => setIsShowFilter(false)}
               className="mobileFilterDoneButton"
             >
-              Done
+              {isBangla ? "সম্পন্ন করুন" : "Done"}
             </button>
             {/* Mobile filter close btn */}
             <span
@@ -270,43 +277,84 @@ const Shop = () => {
               <FaXmark size={30} />
             </span>
             <FilterCheckbox
-              title="BRAND"
+              title={isBangla ? "ব্রান্ড" : "BRAND"}
               inputs={[
-                { label: "Nano-Tech", value: "nano-tech" },
-                { label: "ACC", value: "acc" },
+                {
+                  label: `${isBangla ? "ন্যানো-টেক" : "Nano-Tech"}`,
+                  value: "nano-tech",
+                },
+                {
+                  label: `${isBangla ? "এ সি সি" : "ACC"}`,
+                  value: "acc",
+                },
               ]}
             />
             {/* Price range slider */}
             <PriceRange />
             <FilterCheckbox
-              title="COOLING CAPACITY (TON)"
+              title={
+                isBangla ? "কুলিং সামর্থ্য (টন)" : "COOLING CAPACITY (TON)"
+              }
               inputs={[
-                { label: "0.75 Ton", value: "0.75" },
-                { label: "1 Ton", value: "1" },
-                { label: "1.25 Ton", value: "1.25" },
-                { label: "2 Ton", value: "2" },
-              ]}
-            />
-            <FilterCheckbox
-              title="SERIES NAME"
-              inputs={[
-                { label: "Inverna", value: "inverna" },
-                { label: "Oceanus", value: "oceanus" },
-                { label: "Diamond", value: "Diamond" },
-                { label: "Avian", value: "avian" },
-                { label: "Venturi", value: "Venturi" },
-              ]}
-            />
-            <FilterCheckbox
-              title="TECHNOLOGY"
-              inputs={[
-                { label: "ProGen Inverter", value: "ProGen Inverter" },
                 {
-                  label: "Intelligent Inverter",
+                  label: `${isBangla ? "০.৭৫ টন" : "0.75 Ton"}`,
+                  value: "0.75",
+                },
+                { label: `${isBangla ? "১ টন" : "1 Ton"}`, value: "1" },
+                {
+                  label: `${isBangla ? "১.২৫ টন" : "1.25 Ton"}`,
+                  value: "1.25",
+                },
+                { label: `${isBangla ? "২ টন" : "2 Ton"}`, value: "2" },
+              ]}
+            />
+            <FilterCheckbox
+              title={isBangla ? "সিরিজ নাম" : "SERIES NAME"}
+              inputs={[
+                {
+                  label: `${isBangla ? "ইনভার্না" : "Inverna"}`,
+                  value: "inverna",
+                },
+                {
+                  label: `${isBangla ? "ওশেনাস" : "Oceanus"}`,
+                  value: "oceanus",
+                },
+                {
+                  label: `${isBangla ? "ডায়মন্ড" : "Diamond"}`,
+                  value: "Diamond",
+                },
+                { label: `${isBangla ? "এভিয়ান" : "Avian"}`, value: "avian" },
+                {
+                  label: `${isBangla ? "ভেনটুরি" : "Venturi"}`,
+                  value: "Venturi",
+                },
+              ]}
+            />
+            <FilterCheckbox
+              title={isBangla ? "প্রযুক্তি" : "TECHNOLOGY"}
+              inputs={[
+                {
+                  label: `${
+                    isBangla ? "প্রোজেন ইনভার্টার" : "ProGen Inverter"
+                  }`,
+                  value: "ProGen Inverter",
+                },
+                {
+                  label: `${
+                    isBangla ? "ইন্টেলিভেন্স ইনভার্টার" : "Intelligent Inverter"
+                  }`,
                   value: "Intelligent Inverter",
                 },
-                { label: "Non-Inverter", value: "Non-Inverter" },
-                { label: "Twinfold Inverter", value: "Twinfold Inverter" },
+                {
+                  label: `${isBangla ? "নন ইনভার্টার" : "Non-Inverter"}`,
+                  value: "Non-Inverter",
+                },
+                {
+                  label: `${
+                    isBangla ? "টুইনফোল্ড ইনভার্টার" : "Twinfold Inverter"
+                  }`,
+                  value: "Twinfold Inverter",
+                },
               ]}
             />
           </div>
@@ -324,16 +372,30 @@ const Shop = () => {
           {/* Result and Sort dropdown */}
           <div className="resultAndSort">
             <div className="filterResultCount">
-              <img src="/icon-wish.webp" alt="result icon" /> <b>128</b> items
-              found in Split AC
+              <img src="/icon-wish.webp" alt="result icon" />
+              {isBangla ? (
+                <>
+                  <b>১২৮</b> টি পণ্য পাওয়া গিয়েছে Split AC-এ
+                </>
+              ) : (
+                <>
+                  <b>128</b> items found in Split AC
+                </>
+              )}
             </div>
             <div className="sortContainer">
               <div className="filterInputSort">
-                <FaSortAmountUp /> <b>Sort By</b>
+                <FaSortAmountUp /> <b>Sort</b>
                 <select className="filterSelect" name="filter" id="">
-                  <option value="best_match">Best Match</option>
-                  <option value="price_hl">Price High to Low</option>
-                  <option value="price_lh">Price Low to High</option>
+                  <option value="best_match">
+                    {isBangla ? "সর্বাধিক প্রাসঙ্গিক" : "Best Match"}
+                  </option>
+                  <option value="price_hl">
+                    {isBangla ? "কম থেকে বেশি মূল্যের" : "Price High to Low"}
+                  </option>
+                  <option value="price_lh">
+                    {isBangla ? "বেশি থেকে কম মূল্যের" : "Price Low to High"}
+                  </option>
                 </select>
               </div>
               <div
