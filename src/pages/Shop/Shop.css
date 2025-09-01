@@ -1,0 +1,42 @@
+#shop {
+  min-height: 100vh;
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  padding: 20px 0;
+}
+.shopLeft {
+  width: 25%;
+}
+.shopRight {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.shopRight .resultAndSort {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.shopRight .resultAndSort .filterResultCount,
+.filterInputSort {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  gap: 5px;
+}
+.shopRight .resultAndSort img {
+  width: 22px;
+}
+.shopRight .filterInputSort .filterSelect {
+  padding: 8px;
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+}
+.shopRight .shopProductsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}

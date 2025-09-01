@@ -235,7 +235,7 @@ const Footer = () => {
         <small>
           &copy;
           {isBangla
-            ? "২০২৫ ন্যানো-টেক উৎপাদন প্রযুক্তি। সর্বস্বত্ব সংরক্ষিত।"
+            ? "২০২৫ ন্যানো-টেক প্রডাকশন টেকনোলজি সর্বস্বত্ব সংরক্ষিত।"
             : "2025 Nano-Tech Production Technology. All rights reserved."}
         </small>
       </div>

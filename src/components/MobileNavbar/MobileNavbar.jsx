@@ -230,7 +230,7 @@ const MobileNavbar = () => {
               size={20}
             />
           </span>
-          <Categories />
+          <Categories setIsShow={setIsShow} />
         </div>
       )}
       <Link>
