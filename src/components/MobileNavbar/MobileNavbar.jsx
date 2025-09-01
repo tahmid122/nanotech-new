@@ -17,6 +17,7 @@ import Categories from "../Categories/Categories";
 import { FaHome } from "react-icons/fa";
 import { HiOutlineDotsVertical } from "react-icons/hi";
 import AccordionMui from "../AccordionMui/AccordionMui";
+import MobileCategories from "../MobileCategories/MobileCategories";
 
 const MobileNavbar = () => {
   const { isBangla } = useLang();
@@ -227,10 +228,10 @@ const MobileNavbar = () => {
             <FaXmark
               style={{ cursor: "pointer" }}
               onClick={() => setIsShow(false)}
-              size={20}
+              size={30}
             />
           </span>
-          <Categories setIsShow={setIsShow} />
+          <MobileCategories setIsShow={setIsShow} />
         </div>
       )}
       <Link>
