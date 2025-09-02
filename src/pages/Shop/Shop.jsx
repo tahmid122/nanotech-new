@@ -227,7 +227,7 @@ const Shop = () => {
           <div className="stbLeft">
             <span>
               <Link to={-1}>
-                <FaArrowLeft size={20} />
+                <FaArrowLeft size={18} />
               </Link>
             </span>
             <div className="stbSearchBox">
