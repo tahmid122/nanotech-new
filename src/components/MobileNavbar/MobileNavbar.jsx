@@ -238,7 +238,12 @@ const MobileNavbar = () => {
         <IoHomeOutline size={20} />
         {isBangla ? "হোম" : "Home"}
       </Link>
-      <Link onClick={() => setIsShow(!isShow)}>
+      <Link
+        onClick={() => {
+          setIsShow(!isShow);
+          setIsAccountShow(false);
+        }}
+      >
         <RxDashboard size={20} />
         {isBangla ? "ক্যাটেগরি" : "Category"}
       </Link>
@@ -246,7 +251,13 @@ const MobileNavbar = () => {
         <BsCart size={20} />
         {isBangla ? "কার্ট" : "Cart"}
       </Link>
-      <Link to={"#"} onClick={() => setIsAccountShow(!isAccountShow)}>
+      <Link
+        to={"#"}
+        onClick={() => {
+          setIsAccountShow(!isAccountShow);
+          setIsShow(false);
+        }}
+      >
         <FaRegUser size={20} />
         {isBangla ? "একাউন্ট" : "Account"}
       </Link>

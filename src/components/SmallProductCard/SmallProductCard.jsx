@@ -44,9 +44,7 @@ const SmallProductCard = ({ product = {} }) => {
             </p>
           </div>
           <p className="disCount">
-            {isBangla
-              ? `ডিস্কাউন্ট: ৳${product.bn_discount_price}`
-              : "Save: ৳1800"}
+            {isBangla ? `ডিস্কাউন্ট: ৳১৮০০` : "Save: ৳1800"}
             <span
               style={{
                 fontWeight: "bold",
