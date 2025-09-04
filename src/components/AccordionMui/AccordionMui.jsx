@@ -9,7 +9,6 @@ import { IoIosArrowDown } from "react-icons/io";
 import "./AccordionMui.css";
 import { Link } from "react-router";
 export default function AccordionMui({ sections }) {
-  console.log(sections);
   return (
     <div style={{ width: "100%", zIndex: "0" }} id="mainAccordionDiv">
       {sections?.map((section, index) => (
