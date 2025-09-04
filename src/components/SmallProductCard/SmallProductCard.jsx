@@ -3,8 +3,15 @@ import "./SmallProductCard.css";
 import { Link } from "react-router";
 import { BsCart } from "react-icons/bs";
 import useLang from "../../hooks/useLang";
+import useCart from "../../hooks/useCart";
+import toast from "react-hot-toast";
 const SmallProductCard = ({ product = {} }) => {
   const { isBangla } = useLang();
+  const { setCartItems } = useCart();
+  const addToCart = (product) => {
+    setCartItems((prev) => [...prev, product]);
+    toast.success("Added to cart");
+  };
   return (
     // Small Product card
     <div id="smallProductCard">
@@ -60,7 +67,11 @@ const SmallProductCard = ({ product = {} }) => {
             {isBangla ? "উপলব্ধ: ২০০ পিস" : "Available: 200 Pcs"}
           </p>{" "}
           <div className="proAction">
-            <span>
+            <span
+              onClick={() => {
+                addToCart(product);
+              }}
+            >
               <BsCart />
             </span>
             <button className="proBtn">

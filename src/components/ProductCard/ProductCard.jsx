@@ -4,8 +4,15 @@ import { Link } from "react-router";
 import { FaCartShopping } from "react-icons/fa6";
 import { BsCart } from "react-icons/bs";
 import useLang from "../../hooks/useLang";
+import useCart from "../../hooks/useCart";
+import toast from "react-hot-toast";
 const ProductCard = ({ product = {} }) => {
   const { isBangla } = useLang();
+  const { setCartItems } = useCart();
+  const addToCart = (product) => {
+    setCartItems((prev) => [...prev, product]);
+    toast.success("Added to cart");
+  };
   return (
     // Single Product card
     <div id="productCard">
@@ -56,7 +63,11 @@ const ProductCard = ({ product = {} }) => {
           {isBangla ? "উপলব্ধ: ২০০ পিস" : "Available: 200 Pcs"}
         </p>
         <div className="proAction">
-          <span>
+          <span
+            onClick={() => {
+              addToCart(product);
+            }}
+          >
             <BsCart />
           </span>
           <button className="proBtn">

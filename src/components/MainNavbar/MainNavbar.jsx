@@ -9,9 +9,11 @@ import {
   FaMagnifyingGlass,
 } from "react-icons/fa6";
 import useLang from "../../hooks/useLang";
+import useCart from "../../hooks/useCart";
 const MainNavbar = () => {
   const [isShow, setIsShow] = useState(false);
   const { isBangla } = useLang();
+  const { cartItems } = useCart();
   const locationRef = useRef(null);
   useEffect(() => {
     function handleClickOutside(event) {
@@ -50,6 +52,9 @@ const MainNavbar = () => {
         <div className="navbarRight">
           <Link to={"/cart"} className="cart" title="Cart">
             <img src="/cart.png" alt="cart" />
+            {cartItems?.length > 0 && (
+              <span className="cartCount">{cartItems?.length}</span>
+            )}
           </Link>
 
           <div

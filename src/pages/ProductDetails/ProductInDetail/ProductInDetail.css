@@ -15,7 +15,11 @@
 }
 .pinDetail table {
   width: 100%;
+  border-collapse: collapse;
 }
 .pinDetail table td {
   width: 50%;
+}
+.pinDetail table td {
+  border: none;
 }
