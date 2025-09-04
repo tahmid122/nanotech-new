@@ -28,7 +28,7 @@ const TopNavbar = () => {
       </div>
       <ul>
         <li>
-          <Link>{isBangla ? "লগইন" : "Login"}</Link>
+          <Link to={"/login"}>{isBangla ? "লগইন" : "Login"}</Link>
         </li>
         <li>
           <Link>{isBangla ? "সেলস পয়েন্টস" : "Sales Points"}</Link>

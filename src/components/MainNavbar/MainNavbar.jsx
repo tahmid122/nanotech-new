@@ -48,7 +48,7 @@ const MainNavbar = () => {
           </div>
         </div>
         <div className="navbarRight">
-          <Link className="cart" title="Cart">
+          <Link to={"/cart"} className="cart" title="Cart">
             <img src="/cart.png" alt="cart" />
           </Link>
 
