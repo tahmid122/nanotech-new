@@ -16,9 +16,10 @@
   top: 0;
   z-index: -10;
   background-color: white;
-  height: 90%;
+  height: 93%;
   width: 100%;
   overflow: auto;
+  padding-bottom: 50px;
 }
 #mobileNav .mobileCategory .categoriesList {
   width: 100%;
