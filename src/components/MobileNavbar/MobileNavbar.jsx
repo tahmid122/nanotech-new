@@ -76,11 +76,11 @@ const MobileNavbar = () => {
       {/* Product Page Top Navigation */}
       {isLocation && (
         <div className="proPageTopNav">
-          <Link>
+          <Link to={"/"}>
             <FaHome size={25} />
           </Link>
           <div className="proPTVRight">
-            <Link>
+            <Link to={"/cart"}>
               <BsCart size={25} />
             </Link>
             <Link
@@ -108,7 +108,13 @@ const MobileNavbar = () => {
             />
             Account
           </div>
-          <Link>
+          <Link
+            to={"/"}
+            onClick={() => {
+              setIsShow(false);
+              setIsAccountShow(false);
+            }}
+          >
             <FaHome size={25} />
           </Link>
         </div>
@@ -234,11 +240,18 @@ const MobileNavbar = () => {
           <MobileCategories setIsShow={setIsShow} />
         </div>
       )}
-      <Link>
+      <Link
+        to={"/"}
+        onClick={() => {
+          setIsShow(false);
+          setIsAccountShow(false);
+        }}
+      >
         <IoHomeOutline size={20} />
         {isBangla ? "হোম" : "Home"}
       </Link>
       <Link
+        to={"#"}
         onClick={() => {
           setIsShow(!isShow);
           setIsAccountShow(false);
@@ -247,7 +260,13 @@ const MobileNavbar = () => {
         <RxDashboard size={20} />
         {isBangla ? "ক্যাটেগরি" : "Category"}
       </Link>
-      <Link>
+      <Link
+        to={"/cart"}
+        onClick={() => {
+          setIsShow(false);
+          setIsAccountShow(false);
+        }}
+      >
         <BsCart size={20} />
         {isBangla ? "কার্ট" : "Cart"}
       </Link>
