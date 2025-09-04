@@ -1,8 +1,9 @@
 import React from "react";
 import "./SalesPointCart.css";
-import useSalesPointCart from "../../../hooks/useSalesPointCart";
+import useCart from "../../../hooks/useCart";
 const SalesPointCart = () => {
-  const { salesCartItems, setSalesCartItems } = useSalesPointCart();
+  const { cartItems, setCartItems } = useCart();
+  console.log(cartItems);
   return <div>SalesPointCart</div>;
 };
 
