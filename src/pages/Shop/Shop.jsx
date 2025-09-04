@@ -251,7 +251,7 @@ const Shop = () => {
                 <FaMagnifyingGlass size={20} />
               )}
             </span>
-            <span>
+            <span className="stbrCart">
               <Link
                 style={{
                   display: "flex",
