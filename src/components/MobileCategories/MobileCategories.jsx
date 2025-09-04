@@ -3,6 +3,7 @@ import "./MobileCategories.css";
 import useLang from "../../hooks/useLang";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-router";
+import { IoIosArrowForward } from "react-icons/io";
 const MobileCategories = ({ setIsShow }) => {
   const { isBangla } = useLang();
   // These categories will come from the database
@@ -79,20 +80,33 @@ const MobileCategories = ({ setIsShow }) => {
     },
   ];
   const [selectedSubCategories, setSelectedSubCategories] = useState([]);
+  console.log(selectedSubCategories);
   return (
     <div id="mobileCategories">
       <h5>{isBangla ? "ক্যাটেগরি" : "Categories"}</h5>
       <div className="mobileCategoryList">
         {categories?.map((category) => (
           <div
-            onMouseOver={() => setSelectedSubCategories(category.subCategories)}
+            // onMouseOver={() => setSelectedSubCategories(category.subCategories)}
             className="parent"
             key={category.id}
           >
-            <div className="mcInnerCat">
-              <img src={category.image} alt={category.name} />
-              {category.name}
-            </div>
+            <span className="mcLink">
+              <Link
+                to={"/shop"}
+                onClick={() => setIsShow(false)}
+                className="mcInnerCat"
+              >
+                <img src={category.image} alt={category.name} />
+                {category.name}
+              </Link>
+              <span
+                onClick={() => setSelectedSubCategories(category.subCategories)}
+                className="mcArrowForward"
+              >
+                <IoIosArrowForward />
+              </span>
+            </span>
             <div className="child">
               {selectedSubCategories?.map((cat, index) => (
                 <Link onClick={() => setIsShow(false)} to={"/shop"} key={index}>
