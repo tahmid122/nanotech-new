@@ -15,6 +15,9 @@ const RootLayout = () => {
     window.innerWidth <= 1200;
   const isLocation2 =
     location.pathname.split("/").includes("shop") && window.innerWidth <= 1200;
+  const isLocation3 =
+    location.pathname.split("/").includes("account") &&
+    window.innerWidth <= 1200;
   return (
     <>
       <ScrollToTop />
@@ -22,10 +25,10 @@ const RootLayout = () => {
       <div style={{ position: "relative" }}>
         <div className="bothNavbar">
           <Container>
-            {isLocation || isLocation2 ? "" : <TopNavbar />}
+            {isLocation || isLocation2 || isLocation3 ? "" : <TopNavbar />}
           </Container>
         </div>
-        {isLocation || isLocation2 ? "" : <MainNavbar />}
+        {isLocation || isLocation2 || isLocation3 ? "" : <MainNavbar />}
         <Outlet />
         <Footer />
         {/* Mobile navbar */}

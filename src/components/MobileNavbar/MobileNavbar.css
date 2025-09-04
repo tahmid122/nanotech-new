@@ -104,7 +104,7 @@
 }
 /* Product Page Top Navigation */
 /* Account Info */
-#mobileNav .accountInfo {
+/* #mobileNav .accountInfo {
   width: 100%;
   height: 90%;
   background-color: whitesmoke;
@@ -179,7 +179,7 @@
 #mobileNav .accountInfo .accountDetailsFooter .socialMedias a {
   height: auto;
   width: auto;
-}
+} */
 /* Account Info */
 /* Responsive part */
 @media only screen and (max-width: 1200px) {

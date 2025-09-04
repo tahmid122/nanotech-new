@@ -18,6 +18,7 @@ import { FaHome } from "react-icons/fa";
 import { HiOutlineDotsVertical } from "react-icons/hi";
 import AccordionMui from "../AccordionMui/AccordionMui";
 import MobileCategories from "../MobileCategories/MobileCategories";
+import AccountInfo from "../../pages/AccountInfo/AccountInfo";
 
 const MobileNavbar = () => {
   const { isBangla } = useLang();
@@ -25,52 +26,7 @@ const MobileNavbar = () => {
   const [isAccountShow, setIsAccountShow] = useState(false);
   const location = useLocation();
   const isLocation = location.pathname.split("/").includes("product");
-  const sections = [
-    {
-      title: isBangla ? "ন্যানোটেক সম্পর্কে" : "About Nano-Tech",
-      items: [
-        { label: isBangla ? "আমাদের সম্পর্কে" : "About Us", href: "#" },
-        {
-          label: isBangla ? "এমডির থেকে ম্যাসেজ" : "Message from MD",
-          href: "#",
-        },
-        { label: isBangla ? "কেন আমরা" : "Why Us", href: "#" },
-        { label: isBangla ? "যোগাযোগ" : "Contact Us", href: "#" },
-        {
-          label: isBangla ? "পণ্য সার্টিফিকেশন" : "Product Certification",
-          href: "#",
-        },
-        { label: isBangla ? "পয়েন্ট লিস্ট" : "Point List", href: "#" },
-      ],
-    },
-    {
-      title: isBangla ? "হেল্প ও ইনফরমেশন" : "Help & Information",
-      items: [
-        { label: isBangla ? "এফএকিউ" : "FAQ", href: "#" },
-        { label: isBangla ? "শিপিং নীতিমালা" : "Shipping Policy", href: "#" },
-        {
-          label: isBangla ? "রিটার্ণ ও রিফান্ড" : "Return & Refund",
-          href: "#",
-        },
-      ],
-    },
-    {
-      title: isBangla ? "শীর্ষস্থানীয় ক্যাটাগরীসমূহ" : "Top Categories",
-      items: [
-        { label: isBangla ? "রেফ্রিজারেটর" : "Refrigerators", href: "#" },
-        { label: isBangla ? "টেলিভিশন" : "Television", href: "#" },
-        { label: isBangla ? "এসি" : "Air Conditioner", href: "#" },
-      ],
-    },
-    {
-      title: isBangla ? "আমাদের ব্রান্ড" : "Our Brands",
-      items: [
-        { label: isBangla ? "ন্যানো-টেক" : "Nano-Tech", href: "#" },
-        { label: isBangla ? "মার্সেল" : "Marcel", href: "#" },
-        { label: isBangla ? "অন্যান্য ব্রান্ড" : "Other Brands", href: "#" },
-      ],
-    },
-  ];
+
   return (
     <div id="mobileNav" style={{ zIndex: isAccountShow ? "500" : "50" }}>
       {/* Product Page Top Navigation */}
@@ -99,7 +55,11 @@ const MobileNavbar = () => {
         style={{ display: isAccountShow ? "block" : "none" }}
         className="accountInfo"
       >
-        <div className="accountInfoTopNav">
+        <AccountInfo
+          setIsAccountShow={setIsAccountShow}
+          setIsShow={setIsShow}
+        />
+        {/* <div className="accountInfoTopNav">
           <div>
             <FaArrowLeft
               onClick={() => setIsAccountShow(false)}
@@ -225,7 +185,7 @@ const MobileNavbar = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
       {/* Mobile Category */}
       {isShow && (
@@ -271,9 +231,8 @@ const MobileNavbar = () => {
         {isBangla ? "কার্ট" : "Cart"}
       </Link>
       <Link
-        to={"#"}
+        to={"/account"}
         onClick={() => {
-          setIsAccountShow(!isAccountShow);
           setIsShow(false);
         }}
       >
