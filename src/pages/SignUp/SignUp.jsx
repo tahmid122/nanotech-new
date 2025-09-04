@@ -1,13 +1,13 @@
 import React from "react";
-import "./Login.css";
+import "./SignUp.css";
 import Container from "../../components/Container/Container";
 import { Link } from "react-router";
-const Login = () => {
+const SignUp = () => {
   return (
     <Container>
       <section id="login">
         <div className="loginContainer">
-          <h4>Please Sign In</h4>
+          <h4>Please Sign Up</h4>
           <form>
             <input
               type="text"
@@ -15,11 +15,10 @@ const Login = () => {
               placeholder="Phone Number/Email"
             />
             <input type="password" name="password" placeholder="Password" />
-            <Link to={"/forget-password"}>Forget Password?</Link>
-            <button>Login</button>
+            <button>Sign Up</button>
           </form>
           <p>
-            Don't have an account? <Link to={"/signup"}>Please Sign Up</Link>
+            Have an account? <Link to={"/login"}>Please Login</Link>
           </p>
         </div>
       </section>
@@ -27,4 +26,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignUp;

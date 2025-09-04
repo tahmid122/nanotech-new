@@ -1,30 +1,29 @@
 import React from "react";
-import "./Login.css";
 import Container from "../../components/Container/Container";
 import { Link } from "react-router";
-const Login = () => {
+import { FaArrowLeft } from "react-icons/fa6";
+import "./ForgetPassword.css";
+const ForgetPassword = () => {
   return (
     <Container>
-      <section id="login">
+      <Link className="goBack" to={"/login"}>
+        <FaArrowLeft /> Go Back
+      </Link>
+      <section id="login" style={{ alignItems: "start" }}>
         <div className="loginContainer">
-          <h4>Please Sign In</h4>
+          <h4>Forgot password?</h4>
           <form>
             <input
               type="text"
               name="emailOrPhone"
               placeholder="Phone Number/Email"
             />
-            <input type="password" name="password" placeholder="Password" />
-            <Link to={"/forget-password"}>Forget Password?</Link>
-            <button>Login</button>
+            <button>Send OTP</button>
           </form>
-          <p>
-            Don't have an account? <Link to={"/signup"}>Please Sign Up</Link>
-          </p>
         </div>
       </section>
     </Container>
   );
 };
 
-export default Login;
+export default ForgetPassword;
