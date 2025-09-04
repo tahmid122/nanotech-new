@@ -252,7 +252,16 @@ const Shop = () => {
               )}
             </span>
             <span>
-              <BsCart size={20} />
+              <Link
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+                to={"/cart"}
+              >
+                <BsCart size={20} />
+              </Link>
             </span>
           </div>
         </div>
