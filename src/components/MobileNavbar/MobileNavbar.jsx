@@ -19,6 +19,7 @@ import { HiOutlineDotsVertical } from "react-icons/hi";
 import AccordionMui from "../AccordionMui/AccordionMui";
 import MobileCategories from "../MobileCategories/MobileCategories";
 import AccountInfo from "../../pages/AccountInfo/AccountInfo";
+import useCart from "../../hooks/useCart";
 
 const MobileNavbar = () => {
   const { isBangla } = useLang();
@@ -26,6 +27,7 @@ const MobileNavbar = () => {
   const [isAccountShow, setIsAccountShow] = useState(false);
   const location = useLocation();
   const isLocation = location.pathname.split("/").includes("product");
+  const { cartItems } = useCart();
 
   return (
     <div id="mobileNav" style={{ zIndex: isAccountShow ? "500" : "50" }}>
@@ -36,8 +38,13 @@ const MobileNavbar = () => {
             <FaHome size={25} />
           </Link>
           <div className="proPTVRight">
-            <Link to={"/cart"}>
+            <Link to={"/cart"} className="mobileCart">
               <BsCart size={25} />
+              {cartItems?.length > 0 && (
+                <span className="cartCount cartCountD">
+                  {cartItems?.length}
+                </span>
+              )}
             </Link>
             <Link to={"/account"}>
               <HiOutlineDotsVertical size={25} />
@@ -217,6 +224,7 @@ const MobileNavbar = () => {
       </Link>
       <Link
         to={"/cart"}
+        className="mobileCart"
         onClick={() => {
           setIsShow(false);
           setIsAccountShow(false);
@@ -224,6 +232,9 @@ const MobileNavbar = () => {
       >
         <BsCart size={20} />
         {isBangla ? "কার্ট" : "Cart"}
+        {cartItems?.length > 0 && (
+          <span className="cartCount">{cartItems?.length}</span>
+        )}
       </Link>
       <Link
         to={"/account"}

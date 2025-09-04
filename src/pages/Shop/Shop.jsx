@@ -16,6 +16,7 @@ import { FaSortAmountUp } from "react-icons/fa";
 import { BsCart } from "react-icons/bs";
 import { Link } from "react-router";
 import useLang from "../../hooks/useLang";
+import useCart from "../../hooks/useCart";
 // these data will come from database
 const products = [
   {
@@ -217,6 +218,7 @@ const products = [
 ];
 const Shop = () => {
   const { isBangla } = useLang();
+  const { cartItems } = useCart();
   const [isShowFilter, setIsShowFilter] = useState(false);
   const [isSearchShow, setIsSearchShow] = useState(false);
   return (
@@ -259,8 +261,12 @@ const Shop = () => {
                   justifyContent: "center",
                 }}
                 to={"/cart"}
+                className="mobileCart"
               >
                 <BsCart size={20} />
+                {cartItems?.length > 0 && (
+                  <div className="cartCountS">{cartItems?.length}</div>
+                )}
               </Link>
             </span>
           </div>
