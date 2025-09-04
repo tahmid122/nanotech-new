@@ -39,12 +39,7 @@ const MobileNavbar = () => {
             <Link to={"/cart"}>
               <BsCart size={25} />
             </Link>
-            <Link
-              to={"#"}
-              onClick={() => {
-                setIsAccountShow(true);
-              }}
-            >
+            <Link to={"/account"}>
               <HiOutlineDotsVertical size={25} />
             </Link>
           </div>

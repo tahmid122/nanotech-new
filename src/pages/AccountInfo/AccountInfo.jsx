@@ -67,18 +67,18 @@ const AccountInfo = ({ setIsAccountShow, setIsShow }) => {
             </Link>
             Account
           </div>
-          <Link
-            to={"/"}
-            onClick={() => {
-              setIsShow(false);
-              setIsAccountShow(false);
-            }}
-          >
-            <FaHome size={25} />
+          <Link to={"/"}>
+            <FaHome
+              onClick={() => {
+                setIsShow(false);
+                setIsAccountShow(false);
+              }}
+              size={25}
+            />
           </Link>
         </div>
         <div className="accountInfoDetails">
-          <Link className="logRegBtn">
+          <Link to={"/login"} className="logRegBtn">
             {isBangla ? "লগইন/রেজিস্টার" : "Login/Register"}
           </Link>
           <div className="accountInfoNavigation">
