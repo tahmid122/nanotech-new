@@ -1,5 +1,5 @@
 #cart {
-  padding-bottom: 200px;
+  padding-bottom: 50px;
   overflow-x: auto;
   width: 100%;
   margin: 0 auto;
@@ -23,7 +23,7 @@
   border-radius: var(---primaryBorderRadius);
   overflow-x: auto;
   width: 100%;
-  height: 65vh;
+  /* height: 65vh; */
 }
 .cartSingle {
   display: flex;
