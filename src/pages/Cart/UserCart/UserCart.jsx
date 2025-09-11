@@ -72,7 +72,33 @@ const UserCart = () => {
             </div>
           </div>
         </div>
-        <div className="orderSummary"></div>
+        <div className="orderSummary">
+          <h6>Order Summary</h6>
+          <div>
+            <span>Subtotal</span>
+            <span> ৳1,00,400</span>
+          </div>
+
+          <div>
+            <span>Delivery Charge </span> <span>৳2,400</span>
+          </div>
+
+          <div>
+            <span>Discount</span>
+            <span> ৳10,040</span>
+          </div>
+
+          <hr />
+          <div style={{ fontWeight: "bold" }}>
+            <span>Payable</span>
+            <span> ৳92,760</span>
+          </div>
+          <div className="termsCheck">
+            <input type="checkbox" name="check" />
+            <span>I have read and agreed to the Terms and Conditions*</span>
+          </div>
+          <button>Proceed To Checkout</button>
+        </div>
       </div>
     </div>
   );
