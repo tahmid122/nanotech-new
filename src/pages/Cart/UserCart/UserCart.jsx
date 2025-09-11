@@ -5,10 +5,15 @@ import { IoLocationSharp } from "react-icons/io5";
 import { FaHeart, FaMinus, FaPlus, FaTrash } from "react-icons/fa6";
 import useCart from "../../../hooks/useCart";
 import useLang from "../../../hooks/useLang";
+import toast from "react-hot-toast";
 const UserCart = () => {
-  const { cartItems } = useCart();
+  const { cartItems, setCartItems } = useCart();
   const [isShow, setIsShow] = useState(false);
   const { isBangla } = useLang();
+  const deleteCartItem = (id) => {
+    setCartItems(cartItems.filter((item) => item.id !== id));
+    toast.error("Cart Item Deleted");
+  };
   return (
     <div id="userCart">
       <div className="userCartLeft">
@@ -22,79 +27,95 @@ const UserCart = () => {
             {/* Address form */}
             <div className="flexInput">
               <div className="addFormElm">
-                <label htmlFor="Name">Name*</label>
+                <label htmlFor="Name">{isBangla ? "নাম*" : "Name*"}</label>
                 <input
                   type="text"
                   name="name"
                   required
-                  placeholder="Input Your Name"
+                  placeholder={isBangla ? "আপনার নাম দিন" : "Input Your Name"}
                 />
               </div>
               <div className="addFormElm">
-                <label htmlFor="mobile">Mobile Number*</label>
+                <label htmlFor="mobile">
+                  {isBangla ? "মোবাইল নাম্বার" : "Mobile Number*"}
+                </label>
                 <input
                   type="text"
                   name="mobile"
                   required
-                  placeholder="Input Valid Number"
+                  placeholder={
+                    isBangla ? "সঠিক নাম্বার দিন" : "Input Valid Number"
+                  }
                 />
               </div>
             </div>
             <div className="flexInput">
               <div className="addFormElm">
-                <label htmlFor="addressLabel">Address Label*</label>
+                <label htmlFor="addressLabel">
+                  {isBangla ? "ঠিকানা লেবেল" : "Address Label*"}
+                </label>
                 <select name="addressLabel" id="">
-                  <option value="home">HOME</option>
-                  <option value="office">OFFICE</option>
-                  <option value="other">OTHER</option>
+                  <option value="home">{isBangla ? "হোম" : "Home"}</option>
+                  <option value="office">{isBangla ? "অফিস" : "Office"}</option>
+                  <option value="other">
+                    {isBangla ? "অন্যান্য" : "Other"}
+                  </option>
                 </select>
               </div>
               <div className="addFormElm">
-                <label htmlFor="area">Area*</label>
+                <label htmlFor="area">{isBangla ? "এরিয়া*" : "Area*"}</label>
                 <input
                   type="text"
                   name="area"
                   required
-                  placeholder="Input Your Area"
+                  placeholder={isBangla ? "এরিয়া লিখুন" : "Input Your Area"}
                 />
               </div>
             </div>
             <div className="flexInput">
               <div className="addFormElm">
-                <label htmlFor="address">Address*</label>
+                <label htmlFor="address">
+                  {isBangla ? "ঠিকানা*" : "Address*"}
+                </label>
                 <input
                   type="text"
                   name="address"
                   required
-                  placeholder="Input Your Address"
+                  placeholder={
+                    isBangla ? "আপনার ঠিকানা দিন" : "Input Your Address"
+                  }
                 />
               </div>
               <div className="addFormElm">
-                <label htmlFor="Landmark">Landmark*</label>
+                <label htmlFor="Landmark">
+                  {isBangla ? "ল্যান্ডমার্ক*" : "Landmark*"}
+                </label>
                 <input
                   type="text"
                   name="Landmark"
                   required
-                  placeholder="Input Your Landmark"
+                  placeholder={
+                    isBangla ? "আপনার ল্যান্ডমার্ক দিন" : "Input Your Landmark"
+                  }
                 />
               </div>
             </div>
             <div className="defaultAddress">
-              <h6>Default Address</h6>
+              <h6>{isBangla ? "ডিফল্ট ঠিকানা" : "Default Address"}</h6>
               <label>
                 <input type="checkbox" />
-                Default Shipping Address
+                {isBangla ? "ডিফল্ট শিপিং ঠিকানা" : "Default Shipping Address"}
               </label>
               <label>
                 <input type="checkbox" />
-                Default Billing Address
+                {isBangla ? "ডিফল্ট বিলিং ঠিকানা" : "Default Billing Address"}
               </label>
             </div>
             <div className="formActionsButtons">
               <button type="button" onClick={() => setIsShow(false)}>
-                Cancel
+                {isBangla ? "বাতিল" : "Cancel"}
               </button>
-              <button>Save Address</button>
+              <button>{isBangla ? "ঠিকানা সেভ করুন" : "Save Address"}</button>
             </div>
           </form>
         ) : (
@@ -148,7 +169,7 @@ const UserCart = () => {
                     <span>৳{isBangla ? item?.bn_price : item?.price}</span>
                   </div>
                   <div className="actions">
-                    <span>
+                    <span onClick={() => deleteCartItem(item?.id)}>
                       <FaTrash />
                     </span>
                     <span>
@@ -217,7 +238,7 @@ const UserCart = () => {
             </span>
           </div>
           <button>
-            {isBangla ? "চেকআউট করে এগিয়ে যান" : "Proceed To Checkout"}
+            {isBangla ? "চেকআউট করতে এগিয়ে যান" : "Proceed To Checkout"}
           </button>
         </div>
       </div>

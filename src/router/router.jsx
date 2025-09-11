@@ -8,6 +8,7 @@ import Login from "../pages/Login/Login";
 import AccountInfo from "../pages/AccountInfo/AccountInfo";
 import SignUp from "../pages/SignUp/SignUp";
 import ForgetPassword from "../pages/ForgetPassword/ForgetPassword";
+import Checkout from "../pages/Checkout/Checkout";
 
 export const router = createBrowserRouter([
   {
@@ -22,6 +23,7 @@ export const router = createBrowserRouter([
       { path: "signup", Component: SignUp },
       { path: "forget-password", Component: ForgetPassword },
       { path: "account", Component: AccountInfo },
+      { path: "checkout", Component: Checkout },
     ],
   },
 ]);

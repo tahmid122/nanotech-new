@@ -114,6 +114,7 @@ const SalesPointCart = () => {
             </tbody>
           </table>
           <Link
+            to={`${cartItems.length > 0 ? "/checkout" : "/cart"}`}
             className="btn"
             style={{
               margin: "0 auto",
