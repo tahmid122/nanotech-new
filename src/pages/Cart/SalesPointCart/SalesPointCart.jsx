@@ -90,7 +90,9 @@ const SalesPointCart = () => {
                   color: "white",
                 }}
               >
-                <th rowSpan={2}>Total:</th>
+                <th rowSpan={2} style={{ borderRight: "1px solid white" }}>
+                  Total:
+                </th>
                 <th>Subtotal</th>
                 <th>Discount</th>
                 <th>Payable</th>

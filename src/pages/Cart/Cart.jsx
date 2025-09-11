@@ -11,7 +11,7 @@ const Cart = () => {
   const navigate = useNavigate();
   const { cartItems } = useCart();
   const isLoggedIn = true;
-  const salesPoint = true;
+  const salesPoint = false;
   useEffect(() => {
     if (!isLoggedIn) {
       navigate("/login");
