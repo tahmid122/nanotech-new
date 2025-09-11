@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./UserCart.css";
 import Navigation from "../../../components/Navigation/Navigation";
 import { IoLocationSharp } from "react-icons/io5";
@@ -6,11 +6,103 @@ import { FaHeart, FaMinus, FaPlus, FaTrash } from "react-icons/fa6";
 import useCart from "../../../hooks/useCart";
 const UserCart = () => {
   const { cartItems } = useCart();
-  console.log(cartItems);
+  const [isShow, setIsShow] = useState(false);
   return (
     <div id="userCart">
       <div className="userCartLeft">
         <Navigation links={[{ label: "Home", href: "/" }]} title={"Cart"} />
+        {/* address details */}
+        {isShow ? (
+          <form className="customerAddressForm">
+            {/* Address form */}
+            <div className="flexInput">
+              <div className="addFormElm">
+                <label htmlFor="Name">Name*</label>
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  placeholder="Input Your Name"
+                />
+              </div>
+              <div className="addFormElm">
+                <label htmlFor="mobile">Mobile Number*</label>
+                <input
+                  type="text"
+                  name="mobile"
+                  required
+                  placeholder="Input Valid Number"
+                />
+              </div>
+            </div>
+            <div className="flexInput">
+              <div className="addFormElm">
+                <label htmlFor="addressLabel">Address Label*</label>
+                <select name="addressLabel" id="">
+                  <option value="home">HOME</option>
+                  <option value="office">OFFICE</option>
+                  <option value="other">OTHER</option>
+                </select>
+              </div>
+              <div className="addFormElm">
+                <label htmlFor="area">Area*</label>
+                <input
+                  type="text"
+                  name="area"
+                  required
+                  placeholder="Input Your Area"
+                />
+              </div>
+            </div>
+            <div className="flexInput">
+              <div className="addFormElm">
+                <label htmlFor="address">Address*</label>
+                <input
+                  type="text"
+                  name="address"
+                  required
+                  placeholder="Input Your Address"
+                />
+              </div>
+              <div className="addFormElm">
+                <label htmlFor="Landmark">Landmark*</label>
+                <input
+                  type="text"
+                  name="Landmark"
+                  required
+                  placeholder="Input Your Landmark"
+                />
+              </div>
+            </div>
+            <div className="defaultAddress">
+              <h6>Default Address</h6>
+              <label>
+                <input type="checkbox" />
+                Default Shipping Address
+              </label>
+              <label>
+                <input type="checkbox" />
+                Default Billing Address
+              </label>
+            </div>
+            <div className="formActionsButtons">
+              <button type="button" onClick={() => setIsShow(false)}>
+                Cancel
+              </button>
+              <button>Save Address</button>
+            </div>
+          </form>
+        ) : (
+          <div className="addressButtons">
+            <button onClick={() => setIsShow(true)}>
+              Select Delivery Address
+            </button>
+            <button onClick={() => setIsShow(true)}>
+              Select Billing Address
+            </button>
+          </div>
+        )}
+
         <div className="userCartItems">
           {cartItems?.map((item, index) => (
             <div className="userCartItem">
@@ -26,25 +118,27 @@ const UserCart = () => {
                   <img src={item?.image} alt="product Image" />
                   <p>{item?.name}</p>
                 </div>
-                <div className="price-quantity">
-                  <div className="quantityContainer">
-                    <span className="increment">
-                      <FaMinus />
+                <div className="pqaContainer">
+                  <div className="price-quantity">
+                    <div className="quantityContainer">
+                      <span className="increment">
+                        <FaMinus />
+                      </span>
+                      <span>1</span>
+                      <span className="decrement">
+                        <FaPlus />
+                      </span>
+                    </div>
+                    <span>৳{item?.price}</span>
+                  </div>
+                  <div className="actions">
+                    <span>
+                      <FaTrash />
                     </span>
-                    <span>1</span>
-                    <span className="decrement">
-                      <FaPlus />
+                    <span>
+                      <FaHeart />
                     </span>
                   </div>
-                  <span>৳{item?.price}</span>
-                </div>
-                <div className="actions">
-                  <span>
-                    <FaTrash />
-                  </span>
-                  <span>
-                    <FaHeart />
-                  </span>
                 </div>
               </div>
             </div>
