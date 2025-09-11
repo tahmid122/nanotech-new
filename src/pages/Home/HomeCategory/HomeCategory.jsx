@@ -11,7 +11,7 @@ const HomeCategory = () => {
       link: "/shop",
       image:
         "https://cdn.waltonplaza.com.bd/9976c403-0341-47b6-a317-2e845f620825.png",
-      name: isBangla ? "হোম এপ্লায়েন্স" : "Home Appliances",
+      name: isBangla ? "হোম এপ্লায়েন্স" : "Home Appliancess",
     },
     {
       id: 2,
