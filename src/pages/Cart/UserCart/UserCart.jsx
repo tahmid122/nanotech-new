@@ -4,13 +4,18 @@ import Navigation from "../../../components/Navigation/Navigation";
 import { IoLocationSharp } from "react-icons/io5";
 import { FaHeart, FaMinus, FaPlus, FaTrash } from "react-icons/fa6";
 import useCart from "../../../hooks/useCart";
+import useLang from "../../../hooks/useLang";
 const UserCart = () => {
   const { cartItems } = useCart();
   const [isShow, setIsShow] = useState(false);
+  const { isBangla } = useLang();
   return (
     <div id="userCart">
       <div className="userCartLeft">
-        <Navigation links={[{ label: "Home", href: "/" }]} title={"Cart"} />
+        <Navigation
+          links={[{ label: `${isBangla ? "হোম" : "Home"}`, href: "/" }]}
+          title={`${isBangla ? "কার্ট" : "Cart"}`}
+        />
         {/* address details */}
         {isShow ? (
           <form className="customerAddressForm">
@@ -95,10 +100,14 @@ const UserCart = () => {
         ) : (
           <div className="addressButtons">
             <button onClick={() => setIsShow(true)}>
-              Select Delivery Address
+              {isBangla
+                ? "ডেলিভারি ঠিকানা নির্বাচন করুন"
+                : "Select Delivery Address"}
             </button>
             <button onClick={() => setIsShow(true)}>
-              Select Billing Address
+              {isBangla
+                ? "বিলিং ঠিকানা নির্বাচন করুন"
+                : "Select Billing Address"}
             </button>
           </div>
         )}
@@ -108,15 +117,22 @@ const UserCart = () => {
             <div className="userCartItem">
               <div className="userCartItemTop" key={index}>
                 <div className="uciLeft">
-                  <IoLocationSharp size={20} /> <b>Nano-Tech</b> Software Park,
-                  Jashore
+                  <IoLocationSharp size={20} />{" "}
+                  <b>{isBangla ? "ন্যানো-টেক" : "Nano-Tech"}</b>{" "}
+                  {isBangla
+                    ? "সফটওয়্যার পার্ক, যশোর"
+                    : "Software Park, Jashore"}
                 </div>
-                <div className="uciRight">Delivery Charge: ৳1,200</div>
+                <div className="uciRight">
+                  {isBangla
+                    ? "ডেলিভারি চার্জ ৳১২০০"
+                    : "Delivery Charge: ৳1,200"}
+                </div>
               </div>
               <div className="userCartItemBottom">
                 <div className="img-desc">
                   <img src={item?.image} alt="product Image" />
-                  <p>{item?.name}</p>
+                  <p>{isBangla ? item?.bn_name : item?.name}</p>
                 </div>
                 <div className="pqaContainer">
                   <div className="price-quantity">
@@ -129,7 +145,7 @@ const UserCart = () => {
                         <FaPlus />
                       </span>
                     </div>
-                    <span>৳{item?.price}</span>
+                    <span>৳{isBangla ? item?.bn_price : item?.price}</span>
                   </div>
                   <div className="actions">
                     <span>
@@ -149,7 +165,11 @@ const UserCart = () => {
         <div className="paymentMethods">
           <div className="paymentMethodsTop">
             <img src="/credit-card.gif" alt="credit card" />
-            <h6>Select a payment method</h6>
+            <h6>
+              {isBangla
+                ? "পেমেন্ট মেথড নির্বাচন করুন"
+                : "Select a payment method"}
+            </h6>
           </div>
           <div className="paymentMethodsImages">
             <div>
@@ -167,31 +187,38 @@ const UserCart = () => {
           </div>
         </div>
         <div className="orderSummary">
-          <h6>Order Summary</h6>
+          <h6>{isBangla ? "অর্ডারের সারাংশ" : "Order Summary"}</h6>
           <div>
-            <span>Subtotal</span>
+            <span>{isBangla ? "সাব-টোটাল" : "Subtotal"}</span>
             <span> ৳1,00,400</span>
           </div>
 
           <div>
-            <span>Delivery Charge </span> <span>৳2,400</span>
+            <span>{isBangla ? "ডেলিভারি চার্জ" : "Delivery Charge"} </span>{" "}
+            <span>৳2,400</span>
           </div>
 
           <div>
-            <span>Discount</span>
+            <span>{isBangla ? "ডিস্কাউন্ট" : "Discount"}</span>
             <span> ৳10,040</span>
           </div>
 
           <hr />
           <div style={{ fontWeight: "bold" }}>
-            <span>Payable</span>
+            <span>{isBangla ? "প্রদেয়" : "Payable"}</span>
             <span> ৳92,760</span>
           </div>
           <div className="termsCheck">
             <input type="checkbox" name="check" />
-            <span>I have read and agreed to the Terms and Conditions*</span>
+            <span>
+              {isBangla
+                ? "আমি নিয়ম ও শর্তাবলী পড়েছি এবং তাতে সম্মত হয়েছি*"
+                : "I have read and agreed to the Terms and Conditions*"}
+            </span>
           </div>
-          <button>Proceed To Checkout</button>
+          <button>
+            {isBangla ? "চেকআউট করে এগিয়ে যান" : "Proceed To Checkout"}
+          </button>
         </div>
       </div>
     </div>

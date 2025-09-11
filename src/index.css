@@ -84,6 +84,9 @@ h6 {
 section {
   margin: 20px 0;
 }
+input[type="checkbox"] {
+  accent-color: var(---primaryColor);
+}
 /*Tablet (≤1200px)*/
 @media only screen and (max-width: 1200px) {
   body {
