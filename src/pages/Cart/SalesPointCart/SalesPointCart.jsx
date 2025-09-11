@@ -3,6 +3,7 @@ import "./SalesPointCart.css";
 import { Link } from "react-router";
 import useCart from "../../../hooks/useCart";
 import SingleCartItem from "./SingleCartItem";
+import Navigation from "../../../components/Navigation/Navigation";
 
 const SalesPointCart = () => {
   const { cartItems } = useCart();
@@ -39,6 +40,7 @@ const SalesPointCart = () => {
 
   return (
     <div id="cart">
+      <Navigation links={[{ label: "Home", href: "/" }]} title={"Cart"} />
       <div className="cartTop">
         <h2>Cart</h2>
         <p>{cartItems?.length} Items</p>

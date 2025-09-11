@@ -3,6 +3,7 @@
   overflow-x: auto;
   width: 100%;
   margin: 0 auto;
+  padding-top: 5px;
 }
 #cart .btn {
   width: 200px;

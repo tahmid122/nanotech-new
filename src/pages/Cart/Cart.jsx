@@ -22,7 +22,6 @@ const Cart = () => {
       <section id="cart">
         {cartItems?.length == 0 ? (
           <div className="emptyCartPlaceholder">
-            <Navigation links={[{ label: "Home", href: "/" }]} title={"Cart"} />
             <div className="emptyCartPlaceholderMain">
               <MdOutlineRemoveShoppingCart
                 size={80}
