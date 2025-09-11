@@ -4,8 +4,10 @@ import { Link } from "react-router";
 import useCart from "../../../hooks/useCart";
 import SingleCartItem from "./SingleCartItem";
 import Navigation from "../../../components/Navigation/Navigation";
+import useLang from "../../../hooks/useLang";
 
 const SalesPointCart = () => {
+  const { isBangla } = useLang();
   const { cartItems } = useCart();
   const [rawTotalProducts, setRawTotalProducts] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
@@ -40,10 +42,15 @@ const SalesPointCart = () => {
 
   return (
     <div id="cart">
-      <Navigation links={[{ label: "Home", href: "/" }]} title={"Cart"} />
+      <Navigation
+        links={[{ label: `${isBangla ? "হোম" : "Home"}`, href: "/" }]}
+        title={`${isBangla ? "কার্ট" : "Cart"}`}
+      />
       <div className="cartTop">
-        <h2>Cart</h2>
-        <p>{cartItems?.length} Items</p>
+        <h3>{isBangla ? "কার্ট" : "Cart"}</h3>
+        <p>
+          {cartItems?.length} {isBangla ? "টি পণ্য" : "Items"}
+        </p>
       </div>
 
       <div className="cartMain marginBottom">
@@ -56,14 +63,14 @@ const SalesPointCart = () => {
                 left: "0",
               }}
             >
-              <th>Image</th>
-              <th>Price (BDT)</th>
-              <th>Product ID</th>
-              <th>Payment Type</th>
-              <th>Discount</th>
-              <th>Payable</th>
-              <th>Due</th>
-              <th>Actions</th>
+              <th>{isBangla ? "ছবি" : "Image"}</th>
+              <th>{isBangla ? "দাম (টাকা)" : "Price (BDT)"}</th>
+              <th>{isBangla ? "পণ্যের আইডি" : "Product ID"}</th>
+              <th>{isBangla ? "পেমেন্টের ধরণ" : "Payment Type"}</th>
+              <th>{isBangla ? "ছাড়" : "Discount"}</th>
+              <th>{isBangla ? "প্রদেয়" : "Payable"}</th>
+              <th>{isBangla ? "বাকি" : "Due"}</th>
+              <th>{isBangla ? "একশন" : "Actions"}</th>
             </tr>
           </thead>
           <tbody>
@@ -91,12 +98,12 @@ const SalesPointCart = () => {
                 }}
               >
                 <th rowSpan={2} style={{ borderRight: "1px solid white" }}>
-                  Total:
+                  {isBangla ? "মোট" : "Total"}:
                 </th>
-                <th>Subtotal</th>
-                <th>Discount</th>
-                <th>Payable</th>
-                <th>Due</th>
+                <th>{isBangla ? "সাব-টোটাল" : "Subtotal"}</th>
+                <th>{isBangla ? "ডিস্কাউন্ট" : "Discount"}</th>
+                <th>{isBangla ? "প্রদেয়" : "Payable"}</th>
+                <th>{isBangla ? "বাকি" : "Due"}</th>
               </tr>
               <tr>
                 <td>{rawTotalProducts}</td>
@@ -112,7 +119,7 @@ const SalesPointCart = () => {
               margin: "0 auto",
             }}
           >
-            Sell Now
+            {isBangla ? "বিক্রি করুন" : "Sell Now"}
           </Link>
         </div>
       </>

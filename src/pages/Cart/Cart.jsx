@@ -13,7 +13,7 @@ const Cart = () => {
   const { cartItems } = useCart();
   const { isBangla } = useLang();
   const isLoggedIn = true;
-  const salesPoint = false;
+  const salesPoint = true;
   useEffect(() => {
     if (!isLoggedIn) {
       navigate("/login");

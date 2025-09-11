@@ -1,7 +1,9 @@
 import { FaXmark } from "react-icons/fa6";
 import useCart from "../../../hooks/useCart";
+import useLang from "../../../hooks/useLang";
 
 const SingleCartItem = ({ cartItem, rawTotalProducts }) => {
+  const { isBangla } = useLang();
   const { cartItems, setCartItems } = useCart();
   const removeFromCart = (id) => {
     setCartItems(cartItems.filter((item) => item.id !== id));
@@ -94,7 +96,7 @@ const SingleCartItem = ({ cartItem, rawTotalProducts }) => {
           defaultValue=""
         >
           <option value="" hidden>
-            Select Product Id
+            {isBangla ? "পণ্যের আইডি বাছুন" : "Select Product Id"}
           </option>
           {cartItem?.productId?.map((id) => (
             <option key={id} value={id}>
@@ -110,11 +112,13 @@ const SingleCartItem = ({ cartItem, rawTotalProducts }) => {
           defaultValue={cartItem?.paymentType}
         >
           <option value="" hidden>
-            Select Payment Type
+            {isBangla ? "পেমেন্টের ধরন বাছুন" : "Select Payment Type"}
           </option>
-          <option value="cash">Cash</option>
+          <option value="cash">{isBangla ? "ক্যাশ" : "Cash"}</option>
           {rawTotalProducts > 1500 && (
-            <option value="installment">Installment</option>
+            <option value="installment">
+              {isBangla ? "কিস্তি" : "Installment"}
+            </option>
           )}
         </select>
         {/* discount */}
@@ -139,7 +143,7 @@ const SingleCartItem = ({ cartItem, rawTotalProducts }) => {
       <td>
         <span className="actionTd">
           <button onClick={() => addOneMore(cartItem)} className="btnSmall">
-            Add+
+            {isBangla ? "যোগ করুন+" : "Add+"}
           </button>
           <button
             onClick={() => removeFromCart(cartItem?.id)}
