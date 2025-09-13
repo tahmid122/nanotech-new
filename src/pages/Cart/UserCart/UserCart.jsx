@@ -208,7 +208,9 @@ const UserCart = () => {
           </div>
         </div>
         <div className="orderSummary">
-          <h6>{isBangla ? "অর্ডারের সারাংশ" : "Order Summary"}</h6>
+          <h5 style={{ marginBottom: "10px" }}>
+            {isBangla ? "অর্ডারের সারাংশ" : "Order Summary"}
+          </h5>
           <div>
             <span>{isBangla ? "সাব-টোটাল" : "Subtotal"}</span>
             <span> ৳1,00,400</span>
